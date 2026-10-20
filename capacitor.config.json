@@ -1,0 +1,17 @@
+{
+	"appId": "br.com.lovejourney.app",
+	"appName": "Love Journey",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "https",
+		"appStartPath": "/boas-vindas.html"
+	},
+	"plugins": {
+		"CapacitorHttp": {
+			"enabled": true
+		},
+		"SystemBars": {
+			"insetsHandling": "native"
+		}
+	}
+}

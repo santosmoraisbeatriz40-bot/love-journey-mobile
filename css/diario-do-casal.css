@@ -1,0 +1,1403 @@
+/* Cores e fontes: css/base.css · regras comuns da sidebar: css/sidebar.css */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+
+    color: var(--text-primary);
+
+    background-color: #f4f5f7;
+
+    line-height: 1.5;
+}
+
+button {
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border: none;
+
+    outline: none;
+}
+
+
+/* ==========================================================
+   APP
+   ========================================================== */
+
+.app-layout {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+.sidebar {
+
+    width: 260px;
+
+    min-height: 100vh;
+
+    background-color: var(--bg-sidebar);
+
+    padding: 2rem 1.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    flex-shrink: 0;
+}
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 2.5rem;
+}
+
+.brand-logo {
+
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.brand-name {
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    color: #f49aaa;
+
+    letter-spacing: -0.5px;
+
+    line-height: 1;
+}
+
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+
+
+.nav-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 16px;
+
+    text-decoration: none;
+
+    color: var(--text-primary);
+
+    font-weight: 500;
+
+    font-size: 0.95rem;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+
+
+
+/* ==========================================================
+   SIDEBAR FOOTER
+   ========================================================== */
+
+.sidebar-footer-card {
+
+    background-color: #fbcfe8;
+
+    padding: 1.2rem;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    margin-top: auto;
+}
+
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.main-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 2rem 2.5rem;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+    z-index: 1;
+}
+
+.bg-image {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.header-title-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.header-logo {
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.page-header h2 {
+
+    font-size: 1.8rem;
+
+    color: #2c3e50;
+
+    font-weight: 700;
+}
+
+.header-subtitle {
+
+    color: #e6007f;
+
+    font-weight: 600;
+
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   BOTÕES
+   ========================================================== */
+
+.btn {
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+
+    background-color:
+        var(--primary-pink);
+
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+
+    background-color:
+        var(--primary-hover);
+
+    box-shadow:
+        0 4px 12px
+        rgba(242, 82, 135, 0.4);
+}
+
+.btn-secondary {
+
+    background-color: #2e7d32;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 0.8rem;
+
+    padding: 6px 12px;
+}
+
+.btn-sm {
+
+    font-size: 0.8rem;
+
+    padding: 6px 12px;
+}
+
+
+/* ==========================================================
+   ABAS
+   ========================================================== */
+
+.tab-group {
+
+    display: inline-flex;
+
+    gap: 4px;
+
+    padding: 4px;
+
+    margin-bottom: 1.5rem;
+
+    background-color:
+        var(--bg-overlay);
+
+    border-radius: 20px;
+}
+
+.tab-btn {
+
+    padding: 8px 18px;
+
+    border-radius: 16px;
+
+    background: transparent;
+
+    color: var(--text-primary);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+
+    background-color:
+        rgba(242, 82, 135, 0.1);
+}
+
+.tab-btn.active {
+
+    background-color:
+        var(--primary-pink);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   MODAL DE NOVO REGISTRO
+   ========================================================== */
+
+.entry-dialog {
+    width: min(560px, calc(100% - 32px));
+    max-width: none;
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    color: var(--text-primary);
+    background: #ffffff;
+    border: 1px solid rgba(242, 82, 135, 0.16);
+    border-radius: 20px;
+    box-shadow: 0 24px 80px rgba(38, 23, 32, 0.24);
+}
+
+.entry-dialog::backdrop {
+    background: rgba(38, 23, 32, 0.48);
+    backdrop-filter: blur(3px);
+}
+
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 28px;
+}
+
+.entry-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.entry-dialog-kicker {
+    color: var(--primary-pink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.entry-dialog-header h2 {
+    margin-top: 4px;
+    font-size: 1.35rem;
+}
+
+.entry-dialog-header p,
+.entry-private-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.entry-dialog-close {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 auto;
+    place-items: center;
+    color: var(--text-muted);
+    background: #fff2f6;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.entry-field-label {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.entry-form select,
+.entry-form textarea,
+.entry-form input[type="file"] {
+    width: 100%;
+    padding: 12px 14px;
+    color: var(--text-primary);
+    background: #fffafd;
+    border: 1px solid #eadde2;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.entry-form select:focus,
+.entry-form textarea:focus,
+.entry-form input[type="file"]:focus {
+    outline: 2px solid rgba(242, 82, 135, 0.24);
+    border-color: var(--primary-pink);
+}
+
+.entry-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.entry-optional,
+.entry-photo-help,
+.entry-form-message {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.entry-photo-input {
+    cursor: pointer;
+}
+
+.entry-photo-preview {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.entry-photo-preview[hidden] {
+    display: none;
+}
+
+.entry-form-message:not(:empty) {
+    color: #b4234d;
+}
+
+.entry-form-footer,
+.entry-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.entry-form-footer {
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.entry-form-actions {
+    justify-content: flex-end;
+}
+
+.entry-date {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+}
+
+.entry-item[hidden] {
+    display: none;
+}
+
+
+/* ==========================================================
+   DASHBOARD
+   ========================================================== */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(330px, 1fr);
+
+    gap: 20px;
+
+    align-items: start;
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   COLUNA PRINCIPAL
+   ========================================================== */
+
+.col-main {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   COLUNA LATERAL
+   ========================================================== */
+
+.col-side {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.card {
+
+    width: 100%;
+
+    background-color:
+        var(--card-bg);
+
+    border-radius:
+        var(--card-radius);
+
+    padding: 1.5rem;
+
+    box-shadow:
+        var(--card-shadow);
+}
+
+.card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    color: #2c3e50;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.card-instruction {
+
+    font-size: 0.82rem;
+
+    color: var(--text-muted);
+
+    margin-bottom: 1.2rem;
+}
+
+
+/* ==========================================================
+   CORES DOS CARDS
+   ========================================================== */
+
+.theme-pink {
+    background-color: #fce4ec;
+}
+
+.theme-purple {
+    background-color: #f3e5f5;
+}
+
+.theme-teal {
+    background-color: #e0f2f1;
+}
+
+.theme-yellow {
+    background-color: #fffde7;
+}
+
+
+/* ==========================================================
+   MOMENTOS
+   ========================================================== */
+
+.moments-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.moment-item {
+
+    min-width: 0;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.03);
+}
+
+.moment-item img {
+
+    width: 100%;
+
+    height: 110px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 8px;
+}
+
+.moment-item .item-date {
+
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+
+/* ==========================================================
+   TEXTOS
+   ========================================================== */
+
+.item-date {
+
+    font-size: 0.68rem;
+
+    color: var(--text-muted);
+}
+
+.item-title {
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+.item-text {
+
+    font-size: 0.72rem;
+
+    color: var(--text-light);
+
+    line-height: 1.3;
+}
+
+.item-heart {
+
+    font-size: 0.8rem;
+
+    color: var(--primary-pink);
+}
+
+
+/* ==========================================================
+   DIÁRIO
+   ========================================================== */
+
+.filter-group {
+
+    margin-bottom: 1.2rem;
+}
+
+.tag-group {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.tag {
+
+    border: 1px solid
+        var(--primary-pink);
+
+    color: var(--primary-pink);
+
+    border-radius: 16px;
+
+    padding: 4px 12px;
+
+    font-size: 0.75rem;
+
+    background-color: #ffffff;
+}
+
+.tag-button {
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.tag-button:hover {
+
+    background-color: #fce4ec;
+}
+
+.tag-button.active {
+
+    background-color:
+        var(--primary-pink);
+
+    color: #ffffff;
+}
+
+.entries-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.entry-item {
+
+    min-width: 0;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.03);
+}
+
+.entry-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.entry-item .item-text {
+
+    margin-bottom: 10px;
+}
+
+.entry-item img {
+
+    width: 100%;
+
+    height: 90px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-top: auto;
+}
+
+
+/* ==========================================================
+   RESUMO
+   ========================================================== */
+
+.summary-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.summary-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid #f1f1f1;
+}
+
+.summary-item:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+.summary-icon {
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.1rem;
+
+    flex-shrink: 0;
+}
+
+.summary-icon.pink {
+
+    background-color:
+        var(--color-pink);
+}
+
+.summary-icon.teal {
+
+    background-color:
+        var(--color-teal);
+}
+
+.summary-body {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.summary-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    gap: 8px;
+}
+
+.summary-title {
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+.summary-date {
+
+    font-size: 0.68rem;
+
+    color: var(--text-muted);
+
+    white-space: nowrap;
+}
+
+.summary-text {
+
+    font-size: 0.75rem;
+
+    color: var(--text-light);
+}
+
+
+/* ==========================================================
+   JORNADA
+   ========================================================== */
+
+.journey-progress {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.progress-bar {
+
+    flex: 1;
+
+    height: 12px;
+
+    background-color: #fce4ec;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+
+    width: 82%;
+
+    height: 100%;
+
+    background-color:
+        var(--primary-pink);
+
+    border-radius: inherit;
+}
+
+.progress-heart {
+
+    color:
+        var(--primary-pink);
+
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================================
+   FRASE
+   ========================================================== */
+
+.quote-box {
+
+    background-color: #fce4ec;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.quote-heart {
+
+    color:
+        var(--primary-pink);
+
+    font-size: 1.2rem;
+}
+
+.quote-text {
+
+    font-size: 0.8rem;
+
+    color: #c2185b;
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   ATALHOS + CALENDÁRIO
+   ========================================================== */
+
+.bottom-row {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(260px, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+
+    align-items: stretch;
+}
+
+
+/* ==========================================================
+   ATALHOS
+   ========================================================== */
+
+.shortcuts-card {
+
+    width: 100%;
+}
+
+.shortcut-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+}
+
+.shortcut {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    background-color: #fce4ec;
+
+    color: var(--text-primary);
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.shortcut:hover {
+
+    background-color:
+        var(--primary-pink);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   CALENDÁRIO
+   ========================================================== */
+
+.calendar-card {
+
+    width: 100%;
+}
+
+.calendar-month-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 8px 0 14px; text-transform: capitalize; color: var(--text-primary); }
+.calendar-month-nav button { width: 30px; height: 30px; border-radius: 50%; background: #fce4ec; color: var(--primary-pink); font-size: 1.2rem; line-height: 1; }
+
+.calendar-weekdays,
+.calendar-days {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.calendar-weekdays {
+
+    margin-bottom: 8px;
+}
+
+.calendar-weekdays span {
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    color: var(--text-muted);
+}
+
+.calendar-days {
+
+    row-gap: 6px;
+}
+
+.calendar-days span {
+
+    width: 30px;
+
+    height: 30px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.8rem;
+
+    color: var(--text-light);
+
+    border-radius: 50%;
+}
+
+.calendar-days button.calendar-day { width: 30px; height: 30px; margin: auto; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: transparent; color: var(--text-light); font: inherit; font-size: .8rem; position: relative; }
+.calendar-days button.calendar-day:hover { background: #fce4ec; }
+.calendar-days button.calendar-day.has-entry::after { content: ""; position: absolute; width: 4px; height: 4px; border-radius: 50%; bottom: 2px; background: var(--primary-pink); }
+.calendar-days button.calendar-day.today { background: var(--primary-pink); color: #fff; font-weight: 600; }
+.calendar-days button.calendar-day.today::after { background: #fff; }
+.calendar-days button.calendar-day:focus-visible, .moment-item:focus-visible { outline: 2px solid var(--primary-pink); outline-offset: 2px; }
+
+.entry-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; }
+.entry-actions button { padding: 3px 0; color: #8b3c61; background: transparent; font-size: .72rem; font-weight: 600; }
+.entry-actions button:hover { color: var(--primary-hover); text-decoration: underline; }
+.diary-detail-dialog { border: 0; border-radius: 18px; padding: 0; margin: auto; width: min(700px, calc(100% - 28px)); max-height: 88vh; color: var(--text-primary); box-shadow: 0 20px 70px rgba(37, 20, 53, .28); }
+.diary-detail-dialog::backdrop { background: rgba(36, 24, 51, .58); backdrop-filter: blur(3px); }
+.diary-detail-card { padding: 22px; max-height: 88vh; overflow: auto; font-family: var(--font-family); }
+.diary-detail-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+.diary-detail-card h2 { color: #2c3e50; font-size: 1.2rem; }
+.diary-detail-kicker { color: var(--primary-pink); font-size: .68rem; font-weight: 700; letter-spacing: .08em; }
+.diary-detail-card header button { color: #6d6071; background: transparent; font-size: 1.8rem; line-height: 1; }
+.diary-detail-content { display: grid; gap: 12px; }
+.diary-detail-content .moment-item, .diary-detail-content .entry-item { cursor: default; }
+.diary-detail-content .moment-item img, .diary-detail-content .entry-item img { max-width: 100%; border-radius: 10px; }
+.diary-detail-card footer { display: flex; justify-content: flex-end; margin-top: 18px; }
+.diary-detail-card footer button, .calendar-add-entry { border: 0; border-radius: 10px; padding: 9px 15px; background: var(--primary-pink); color: #fff; font: 600 .84rem var(--font-family); cursor: pointer; }
+.diary-detail-content .calendar-add-entry { justify-self: start; margin-top: 12px; }
+.moment-item { cursor: pointer; }
+
+.calendar-days .today {
+
+    background-color:
+        var(--primary-pink);
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+
+@media (max-width: 1200px) {
+
+    .main-content {
+
+        padding: 1.5rem;
+    }
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            minmax(0, 1.7fr)
+            minmax(300px, 1fr);
+    }
+
+    .moments-grid,
+    .entries-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .col-side {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        align-items: start;
+    }
+
+    .summary-card,
+    .journey-card,
+    .reminder-card {
+
+        height: 100%;
+    }
+
+    .bottom-row {
+
+        grid-template-columns:
+            minmax(0, 2fr)
+            minmax(250px, 1fr);
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .col-side {
+
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-row {
+
+        grid-template-columns: 1fr;
+    }
+
+    .shortcut-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .app-layout {
+
+        flex-direction: column;
+    }
+
+    .sidebar {
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .main-content {
+
+        padding: 1rem;
+    }
+
+    .page-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 16px;
+    }
+
+    .moments-grid,
+    .entries-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .shortcut-list {
+
+        grid-template-columns: 1fr;
+    }
+
+    .tab-group {
+
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .entry-dialog {
+        width: calc(100% - 20px);
+        max-height: calc(100dvh - 20px);
+        border-radius: 16px;
+    }
+
+    .entry-form {
+        gap: 8px;
+        padding: 20px 16px;
+    }
+
+    .entry-dialog-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .entry-form-footer,
+    .entry-form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .entry-form-actions .btn {
+        width: 100%;
+    }
+
+    .card {
+
+        padding: 1rem;
+    }
+
+    .header-title-wrapper {
+
+        align-items: flex-start;
+    }
+
+    .header-logo {
+
+        width: 44px;
+        height: 44px;
+    }
+
+    .page-header h2 {
+
+        font-size: 1.4rem;
+    }
+
+    .header-subtitle {
+
+        font-size: 0.8rem;
+    }
+
+    .calendar-days span {
+
+        width: 27px;
+
+        height: 27px;
+    }
+}

@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Journey - Desafios</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./vendor/fontawesome/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/desafios-do-casal.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <img
+            src="./assets/imgs/felipe/img/logo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          />
+          <h1 class="brand-name">Love Journey</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="./dashboard-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-house"></i></span> Início
+              </a>
+            </li>
+            <li>
+              <a href="./diario-do-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-book"></i></span> Diário do casal
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard-emocoes.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-face-laugh"></i></span> Minhas emoções
+              </a>
+            </li>
+            <li>
+              <a
+                href="./desafios-do-casal.html"
+                class="nav-link active"
+                aria-current="page"
+              >
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-bullseye"></i></span> Desafios
+              </a>
+            </li>
+            <li>
+              <a href="./apoio.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-user"></i></span> Apoio
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <img
+          src="./assets/imgs/felipe/img/fundo.png"
+          alt="Plano de fundo Love Journey"
+          class="bg-image"
+        />
+
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="./assets/imgs/felipe/img/logo.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Desafios</h2>
+              <p class="header-subtitle">
+                Pequenos desafios, grandes momentos. Juntos, vocês constroem um
+                amor ainda mais forte.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-new-challenge">
+            <span>+</span> Novo desafio
+          </button>
+        </header>
+
+        <div class="dashboard-grid">
+          <section class="card challenges-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-fire"></i></span> Desafios em andamento</h3>
+              <button class="btn btn-secondary btn-sm">Ver todas</button>
+            </div>
+            <p class="card-instruction">
+              Vocês já estão em movimento! Continue assim!
+            </p>
+
+            <div class="challenge">
+              <span class="icon-circle theme-pink"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+              <div class="info">
+                <h4>1 semana de mensagens especiais</h4>
+                <p>
+                  Trocar uma mensagem carinhosa por dia, seja um texto, áudio ou
+                  foto.
+                </p>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-pink" style="width: 57%"></div>
+                </div>
+              </div>
+              <div class="status">
+                4/7<span class="count"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i> Vence em 2 dias</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+
+            <div class="challenge">
+              <span class="icon-circle theme-purple"><i aria-hidden="true" class="fa-solid fa-dumbbell"></i></span>
+              <div class="info">
+                <h4>Desafio da saúde juntos</h4>
+                <p>Treinar juntos pelo menos 3x na semana.</p>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill fill-purple"
+                    style="width: 66%"
+                  ></div>
+                </div>
+              </div>
+              <div class="status">
+                2/3<span class="count"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i> Vence em 5 dias</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+
+            <div class="challenge">
+              <span class="icon-circle theme-yellow">⭐</span>
+              <div class="info">
+                <h4>Explorar novos lugares</h4>
+                <p>Conhecer um lugar novo, mesmo que seja perto.</p>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill fill-yellow"
+                    style="width: 100%"
+                  ></div>
+                </div>
+              </div>
+              <div class="status done">
+                <i aria-hidden="true" class="fa-solid fa-check"></i> Concluído<span class="count">08/07/2025</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+
+            <div class="challenge">
+              <span class="icon-circle theme-teal"><i aria-hidden="true" class="fa-solid fa-book-open"></i></span>
+              <div class="info">
+                <h4>Ler um livro juntos</h4>
+                <p>Cada um lê um capítulo e compartilha o que achou.</p>
+                <div class="progress-bar">
+                  <div class="progress-fill fill-teal" style="width: 43%"></div>
+                </div>
+              </div>
+              <div class="status">
+                3/7<span class="count"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i> Vence em 10 dias</span>
+              </div>
+              <span class="chevron">›</span>
+            </div>
+          </section>
+
+          <div class="side-stack">
+            <section class="card category-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-tag"></i></span> Desafios por categoria
+                </h3>
+              </div>
+
+              <div class="category-item">
+                <span class="icon-circle icon-sm theme-pink"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+                <span class="cat-name">Amor</span>
+                <span class="cat-count">6 desafios ›</span>
+              </div>
+              <div class="category-item">
+                <span class="icon-circle icon-sm theme-purple"><i aria-hidden="true" class="fa-solid fa-dumbbell"></i></span>
+                <span class="cat-name">Saúde e bem-estar</span>
+                <span class="cat-count">4 desafios ›</span>
+              </div>
+              <div class="category-item">
+                <span class="icon-circle icon-sm theme-yellow">⭐</span>
+                <span class="cat-name">Diversão</span>
+                <span class="cat-count">3 desafios ›</span>
+              </div>
+              <div class="category-item">
+                <span class="icon-circle icon-sm theme-teal"><i aria-hidden="true" class="fa-solid fa-book-open"></i></span>
+                <span class="cat-name">Crescimento pessoal</span>
+                <span class="cat-count">2 desafios ›</span>
+              </div>
+            </section>
+
+            <section class="card progress-card">
+              <div class="card-header">
+                <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-trophy"></i></span> Progresso do casal</h3>
+              </div>
+
+              <div class="ring-wrap">
+                <div class="ring" style="--porcentagem: 100">
+                  <span>100%</span>
+                </div>
+                <p class="progress-text">
+                  Vocês já completaram 15 de 15 desafios.
+                </p>
+              </div>
+
+              <div class="tip-box">
+                <p>Mais 5 desafios e vocês ganham um ícone especial!</p>
+              </div>
+            </section>
+          </div>
+
+          <section class="card completed-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-circle-check"></i></span> Desafios concluídos</h3>
+              <button class="btn btn-secondary btn-sm">Ver todas</button>
+            </div>
+            <p class="card-instruction">
+              Vocês já viveram momentos incríveis juntos!
+            </p>
+
+            <div class="completed-grid">
+              <article class="completed-item theme-pink-light">
+                <img
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=200&fit=crop"
+                  alt="Explorar novos lugares"
+                />
+                <h4 class="item-title">Explorar novos lugares</h4>
+                <span class="item-date">08/07/2025</span>
+                <span class="badge-done"><i aria-hidden="true" class="fa-solid fa-check"></i> Concluído</span>
+              </article>
+
+              <article class="completed-item theme-pink-light">
+                <img
+                  src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&h=200&fit=crop"
+                  alt="Escrever uma carta"
+                />
+                <h4 class="item-title">Escrever uma carta</h4>
+                <span class="item-date">02/07/2025</span>
+                <span class="badge-done"><i aria-hidden="true" class="fa-solid fa-check"></i> Concluído</span>
+              </article>
+
+              <article class="completed-item theme-pink-light">
+                <img
+                  src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=300&h=200&fit=crop"
+                  alt="Maratona de filmes"
+                />
+                <h4 class="item-title">Maratona de filmes</h4>
+                <span class="item-date">25/06/2025</span>
+                <span class="badge-done"><i aria-hidden="true" class="fa-solid fa-check"></i> Concluído</span>
+              </article>
+
+              <article class="completed-item theme-pink-light">
+                <img
+                  src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=200&fit=crop"
+                  alt="Primeiro encontro"
+                />
+                <h4 class="item-title">Primeiro encontro</h4>
+                <span class="item-date">12/06/2025</span>
+                <span class="badge-done"><i aria-hidden="true" class="fa-solid fa-check"></i> Concluído</span>
+              </article>
+
+              <article class="completed-item theme-pink-light">
+                <img
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=300&h=200&fit=crop"
+                  alt="Primeiro encontro"
+                />
+                <h4 class="item-title">Primeiro encontro</h4>
+                <span class="item-date">12/06/2025</span>
+                <span class="badge-done"><i aria-hidden="true" class="fa-solid fa-check"></i> Concluído</span>
+              </article>
+            </div>
+
+            <div class="carousel-controls">
+              <button class="nav-arrow" aria-label="Anterior">&lt;</button>
+              <div class="carousel-dots">
+                <span class="dot-nav active"></span>
+                <span class="dot-nav"></span>
+                <span class="dot-nav"></span>
+              </div>
+              <button class="nav-arrow" aria-label="Próximo">&gt;</button>
+            </div>
+          </section>
+
+          <div class="side-stack">
+            <section class="card upcoming-card">
+              <div class="card-header">
+                <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i></span> Próximos desafios</h3>
+              </div>
+
+              <div class="upcoming">
+                <span class="icon-circle icon-sm theme-purple"><i aria-hidden="true" class="fa-solid fa-dumbbell"></i></span>
+                <div class="info">
+                  <h4>Treino em casal</h4>
+                  <p>Treinar juntos 3x na semana.</p>
+                </div>
+                <span class="date">12/07/2025</span>
+              </div>
+
+              <div class="upcoming">
+                <span class="icon-circle icon-sm theme-pink"><i aria-hidden="true" class="fa-solid fa-film"></i></span>
+                <div class="info">
+                  <h4>Noite de cinema em casa</h4>
+                  <p>Assistir a um filme que ambos queiram.</p>
+                </div>
+                <span class="date">15/07/2025</span>
+              </div>
+
+              <div class="upcoming">
+                <span class="icon-circle icon-sm theme-pink"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+                <div class="info">
+                  <h4>Cartas do amor</h4>
+                  <p>Escrever uma carta um para o outro.</p>
+                </div>
+                <span class="date">18/07/2025</span>
+              </div>
+            </section>
+
+            <div class="tip-box tip-standalone">
+              <h5><span class="tip-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span> Dica do dia</h5>
+              <p>Os melhores momentos são os que não são planejados.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./js/desafios-do-casal.js" defer></script>
+  </body>
+</html>

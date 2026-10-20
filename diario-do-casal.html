@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+
+    <title>Love Journey - Diários</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./vendor/fontawesome/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/diario-do-casal.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div>
+          <div class="brand">
+            <img
+              src="./assets/imgs/logo love journey.png"
+              alt="Logo Love Journey"
+              class="brand-logo"
+            />
+
+            <h1 class="brand-name">Love Journey</h1>
+          </div>
+
+          <nav class="sidebar-nav">
+            <ul>
+              <li>
+                <a href="./dashboard-casal.html" class="nav-link">
+                  <span class="icon"><i aria-hidden="true" class="fa-solid fa-house"></i></span>
+                  Início
+                </a>
+              </li>
+
+              <li>
+                <a href="./diario-do-casal.html" class="nav-link active">
+                  <span class="icon"><i aria-hidden="true" class="fa-solid fa-book"></i></span>
+                  Diário do casal
+                </a>
+              </li>
+
+              <li>
+                <a href="./dashboard-emocoes.html" class="nav-link">
+                  <span class="icon"><i aria-hidden="true" class="fa-solid fa-face-laugh"></i></span>
+                  Minhas emoções
+                </a>
+              </li>
+
+              <li>
+                <a href="./desafios-do-casal.html" class="nav-link">
+                  <span class="icon"><i aria-hidden="true" class="fa-solid fa-bullseye"></i></span>
+                  Desafios
+                </a>
+              </li>
+
+              <li>
+                <a href="./apoio.html" class="nav-link">
+                  <span class="icon"><i aria-hidden="true" class="fa-solid fa-user"></i></span>
+                  Apoio
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <img
+          src="./assets/imgs/felipe/img/fundo.png"
+          alt="Plano de fundo Love Journey"
+          class="bg-image"
+        />
+
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="./assets/imgs/logo love journey.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Diários</h2>
+
+              <p class="header-subtitle">
+                Registros, textos, momentos e agora também o seu diário pessoal.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-new-entry" type="button" aria-haspopup="dialog" aria-controls="new-entry-dialog">
+            <span>+</span>
+            Novo registro
+          </button>
+        </header>
+
+        <div class="tab-group">
+          <a class="tab-btn active" href="#moments-section">Registros e momentos</a>
+
+          <a class="tab-btn" href="./diario-com-ia.html">Diário pessoal</a>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="col-main">
+            <section class="card moments-card" id="moments-section">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-camera"></i></span>
+                  Momentos especiais
+                </h3>
+
+                <button class="btn btn-secondary btn-sm" type="button" data-show-moments>Ver todos</button>
+              </div>
+
+              <p class="card-instruction">
+                Melhores momentos que vivemos juntos.
+              </p>
+
+              <div class="moments-grid">
+                <article class="moment-item theme-pink" role="button" tabindex="0">
+                  <img
+                    src="/assets/imgs/cibelly_diario/sol_casal.png"
+                    alt="Casal no pôr do sol"
+                  />
+
+                  <span class="item-date"> 12/07/2025 </span>
+
+                  <p class="item-text">Nosso primeiro pôr do sol juntos.</p>
+                </article>
+
+                <article class="moment-item theme-purple" role="button" tabindex="0">
+                  <img
+                    src="/assets/imgs/cibelly_diario/chuva_casal.png"
+                    alt="Casal girando na chuva"
+                  />
+
+                  <span class="item-date"> 08/07/2025 </span>
+
+                  <p class="item-text">Você e eu sempre.</p>
+                </article>
+
+                <article class="moment-item theme-teal" role="button" tabindex="0">
+                  <img
+                    src="/assets/imgs/cibelly_diario/piquenique_casal.png"
+                    alt="Casal no piquenique"
+                  />
+
+                  <span class="item-date"> 03/07/2025 </span>
+
+                  <p class="item-text">Aquele dia no parque.</p>
+                </article>
+
+                <article class="moment-item theme-yellow" role="button" tabindex="0">
+                  <img
+                    src="/assets/imgs/cibelly_diario/rindo_casal.png"
+                    alt="Casal rindo"
+                  />
+
+                  <span class="item-date"> 26/06/2025 </span>
+
+                  <p class="item-text">Nossas risadas.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="card diary-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-pen-to-square"></i></span>
+                  Diário pessoal
+                </h3>
+
+                <button class="btn btn-secondary btn-sm" type="button" data-show-entries>Ver todos</button>
+              </div>
+
+              <p class="card-instruction">
+                Seus pensamentos, sentimentos e tudo que quiser compartilhar.
+              </p>
+
+              <div class="tag-group filter-group">
+                <button class="tag tag-button active">Todos</button>
+
+                <button class="tag tag-button">Reflexões</button>
+
+                <button class="tag tag-button">Sonhos</button>
+
+                <button class="tag tag-button">Desabafos</button>
+
+                <button class="tag tag-button">Gratidão</button>
+              </div>
+
+              <div class="entries-grid">
+                <article class="entry-item theme-pink">
+                  <div class="entry-top">
+                    <h4 class="item-title"><i aria-hidden="true" class="fa-solid fa-hands-praying"></i> Gratidão</h4>
+
+                    <span class="item-heart"> <i aria-hidden="true" class="fa-solid fa-heart"></i> </span>
+                  </div>
+
+                  <p class="item-text">
+                    Hoje eu só queria te dizer que sou muito grata por tudo que
+                    vivemos até agora...
+                  </p>
+
+                  <img
+                    src="/assets/imgs/cibelly_diario/cartas_casal.png"
+                    alt="Cartas que recebi"
+                  />
+                </article>
+
+                <article class="entry-item theme-purple">
+                  <div class="entry-top">
+                    <h4 class="item-title"><i aria-hidden="true" class="fa-solid fa-comment-dots"></i> Reflexão</h4>
+
+                    <span class="item-heart"> <i aria-hidden="true" class="fa-solid fa-heart"></i> </span>
+                  </div>
+
+                  <p class="item-text">
+                    Tô cansada, mas feliz. É incrível como tudo fica mais leve
+                    com você...
+                  </p>
+
+                  <img
+                    src="/assets/imgs/cibelly_diario/maos_dadas.png"
+                    alt="Casal de mãos dadas"
+                  />
+                </article>
+
+                <article class="entry-item theme-teal">
+                  <div class="entry-top">
+                    <h4 class="item-title"><i aria-hidden="true" class="fa-solid fa-moon"></i> Sonhos</h4>
+
+                    <span class="item-heart"> <i aria-hidden="true" class="fa-solid fa-heart"></i> </span>
+                  </div>
+
+                  <p class="item-text">
+                    Tenho tantos planos... E quero viver todos eles ao seu lado.
+                  </p>
+
+                  <img
+                    src="/assets/imgs/cibelly_diario/viagem_casal.png"
+                    alt="Possíveis viagens"
+                  />
+                </article>
+
+                <article class="entry-item theme-yellow">
+                  <div class="entry-top">
+                    <h4 class="item-title"><i aria-hidden="true" class="fa-solid fa-comment"></i> Desabafo</h4>
+
+                    <span class="item-heart"> <i aria-hidden="true" class="fa-solid fa-heart"></i> </span>
+                  </div>
+
+                  <p class="item-text">
+                    Tem dias que bate uma ansiedade, mas eu lembro de você e
+                    tudo fica melhor.
+                  </p>
+
+                  <img
+                    src="/assets/imgs/cibelly_diario/desabafo.png"
+                    alt="Casal de mãos dadas na praia"
+                  />
+                </article>
+              </div>
+            </section>
+
+            <div class="bottom-row">
+              <section class="card shortcuts-card">
+                <div class="card-header">
+                  <h3>
+                    <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-bolt"></i></span>
+                    Atalhos rápidos
+                  </h3>
+                </div>
+
+                <div class="shortcut-list">
+                  <a href="./diario-com-ia.html" class="shortcut">
+                    <span class="icon"><i aria-hidden="true" class="fa-solid fa-pen"></i></span>
+                    Escrever no diário
+                  </a>
+
+                  <a href="#moments-section" class="shortcut" data-shortcut="moments">
+                    <span class="icon"><i aria-hidden="true" class="fa-solid fa-camera"></i></span>
+                    Momentos especiais
+                  </a>
+
+                  <a href="#new-entry-dialog" class="shortcut" data-shortcut="photo">
+                    <span class="icon"><i aria-hidden="true" class="fa-solid fa-image"></i></span>
+                    Adicionar fotos
+                  </a>
+
+                  <a href="#moments-section" class="shortcut" data-shortcut="memories">
+                    <span class="icon"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+                    Ver memórias
+                  </a>
+
+                  <a href="#calendar-card" class="shortcut" data-shortcut="calendar">
+                    <span class="icon"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i></span>
+                    Ver calendário
+                  </a>
+                </div>
+              </section>
+
+              <section class="card calendar-card" id="calendar-card">
+                <div class="card-header">
+                  <h3>
+                    <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i></span>
+                    Calendário
+                  </h3>
+                </div>
+
+                <div class="calendar-month-nav"><button type="button" data-calendar-prev aria-label="Mês anterior">‹</button><strong data-calendar-label></strong><button type="button" data-calendar-next aria-label="Próximo mês">›</button></div>
+
+                <div class="calendar-weekdays">
+                  <span>DOM</span>
+                  <span>SEG</span>
+                  <span>TER</span>
+                  <span>QUA</span>
+                  <span>QUI</span>
+                  <span>SEX</span>
+                  <span>SÁB</span>
+                </div>
+
+                <div class="calendar-days" data-calendar-days></div>
+              </section>
+            </div>
+          </div>
+
+          <aside class="col-side">
+            <section class="card summary-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-book-open"></i></span>
+                  Resumo do nosso diário
+                </h3>
+              </div>
+
+              <div class="summary-list">
+                <div class="summary-item">
+                  <span class="summary-icon pink"> <i aria-hidden="true" class="fa-solid fa-camera"></i> </span>
+
+                  <div class="summary-body">
+                    <div class="summary-top">
+                      <strong class="summary-title">
+                        Momentos especiais
+                      </strong>
+
+                      <span class="summary-date"> 12/07/2025 </span>
+                    </div>
+
+                    <p class="summary-text">
+                      Nosso primeiro pôr do sol juntos...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <span class="summary-icon teal"> <i aria-hidden="true" class="fa-solid fa-pen-to-square"></i> </span>
+
+                  <div class="summary-body">
+                    <div class="summary-top">
+                      <strong class="summary-title"> Diário pessoal </strong>
+
+                      <span class="summary-date"> 10/07/2025 </span>
+                    </div>
+
+                    <p class="summary-text">
+                      Hoje eu só queria te dizer que...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <span class="summary-icon pink"> <i aria-hidden="true" class="fa-solid fa-camera"></i> </span>
+
+                  <div class="summary-body">
+                    <div class="summary-top">
+                      <strong class="summary-title">
+                        Momentos especiais
+                      </strong>
+
+                      <span class="summary-date"> 08/07/2025 </span>
+                    </div>
+
+                    <p class="summary-text">
+                      Um dia perfeito, do nosso jeito...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <span class="summary-icon teal"> <i aria-hidden="true" class="fa-solid fa-pen-to-square"></i> </span>
+
+                  <div class="summary-body">
+                    <div class="summary-top">
+                      <strong class="summary-title"> Diário pessoal </strong>
+
+                      <span class="summary-date"> 05/07/2025 </span>
+                    </div>
+
+                    <p class="summary-text">Tô cansada, mas feliz...</p>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <span class="summary-icon pink"> <i aria-hidden="true" class="fa-solid fa-camera"></i> </span>
+
+                  <div class="summary-body">
+                    <div class="summary-top">
+                      <strong class="summary-title">
+                        Momentos especiais
+                      </strong>
+
+                      <span class="summary-date"> 28/06/2025 </span>
+                    </div>
+
+                    <p class="summary-text">
+                      Nossas pequenas grandes aventuras...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="card journey-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-flag"></i></span>
+                  Nossa jornada
+                </h3>
+              </div>
+
+              <p class="card-instruction">Juntos há 128 dias</p>
+
+              <div class="journey-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="82"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-label="Progresso da jornada"
+                >
+                  <div class="progress-fill"></div>
+                </div>
+
+                <span class="progress-heart"> <i aria-hidden="true" class="fa-solid fa-heart"></i> </span>
+              </div>
+            </section>
+
+            <section class="card reminder-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span>
+                  Hoje no nosso diário
+                </h3>
+              </div>
+
+              <div class="quote-box">
+                <span class="quote-heart"> <i aria-hidden="true" class="fa-solid fa-heart"></i> </span>
+
+                <p class="quote-text">
+                  “O amor também se constrói nos detalhes do dia a dia.”
+                </p>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+    <dialog class="entry-dialog" id="new-entry-dialog" aria-labelledby="entry-dialog-title">
+      <form class="entry-form" id="new-entry-form">
+        <div class="entry-dialog-header">
+          <div>
+            <span class="entry-dialog-kicker">Diário pessoal</span>
+            <h2 id="entry-dialog-title">O que está pensando?</h2>
+            <p>Este espaço é seu. Escreva no seu tempo.</p>
+          </div>
+          <button class="entry-dialog-close" type="button" data-close-entry aria-label="Fechar">&times;</button>
+        </div>
+        <label class="entry-field-label" for="entry-category">Categoria</label>
+        <select id="entry-category" name="category" required>
+          <option value="Reflexões">Reflexões</option>
+          <option value="Sonhos">Sonhos</option>
+          <option value="Desabafos">Desabafos</option>
+          <option value="Gratidão">Gratidão</option>
+        </select>
+
+        <label class="entry-field-label" for="entry-date">Data do registro</label>
+        <input id="entry-date" name="date" type="date" required>
+        <label class="entry-field-label" for="entry-content">Seu registro</label>
+        <textarea id="entry-content" name="content" rows="6" maxlength="2000" placeholder="Escreva aqui o que está passando pela sua cabeça..." required></textarea>
+        <label class="entry-field-label" for="entry-photo">Foto <span class="entry-optional">(opcional)</span></label>
+        <input class="entry-photo-input" id="entry-photo" name="photo" type="file" accept="image/*">
+        <p class="entry-photo-help">Escolha uma foto para acompanhar este momento.</p>
+        <img class="entry-photo-preview" id="entry-photo-preview" alt="Prévia da foto selecionada" hidden>
+        <p class="entry-form-message" id="entry-form-message" role="status" aria-live="polite"></p>
+        <div class="entry-form-footer">
+          <span class="entry-private-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Seu registro fica salvo neste dispositivo.</span>
+          <div class="entry-form-actions">
+            <button class="btn btn-secondary" type="button" data-close-entry>Cancelar</button>
+            <button class="btn btn-primary" type="submit">Salvar registro</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+    <script src="./js/diario-do-casal.js" defer></script>
+  </body>
+</html>

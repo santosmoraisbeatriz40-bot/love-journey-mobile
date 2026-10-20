@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Love Journey - Meus Usuários</title>
+
+    <!-- Ícone do site -->
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/usuarios-do-profissional.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="app-layout">
+      <!-- ========================================== -->
+      <!-- NAVEGAÇÃO LATERAL (SIDEBAR) -->
+      <!-- ========================================== -->
+
+      <aside class="sidebar">
+        <div class="brand">
+          <img
+            src="./assets/imgs/usuarios/img/logo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          />
+
+          <h1 class="brand-name">Love Journey</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="./dashboard-profissional.html" class="nav-link">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="8"
+                    r="3.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M5 20C5.8 16.7 8.1 15 12 15C15.9 15 18.2 16.7 19 20"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <span>Meu Perfil</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./comunidade.html" class="nav-link">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 11.5C20 15.64 16.42 19 12 19C10.72 19 9.51 18.72 8.44 18.22L4 20L5.32 16.45C4.49 15.07 4 13.45 4 11.5C4 7.36 7.58 4 12 4C16.42 4 20 7.36 20 11.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>Comunidade</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./usuarios-do-profissional.html"
+                class="nav-link active"
+                aria-current="page"
+              >
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="9"
+                    cy="8"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M3.5 19C4.1 15.9 6 14.5 9 14.5C12 14.5 13.9 15.9 14.5 19"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M15 5.5C16.9 5.5 18.5 6.9 18.5 8.7C18.5 10.2 17.5 11.4 16.2 11.8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M16 14.5C18.7 14.7 20.2 16.2 20.5 19"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <span>Usuários</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Card de rodapé da Sidebar -->
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- CONTEÚDO PRINCIPAL -->
+      <!-- ========================================== -->
+
+      <main class="main-content">
+        <img
+          src="./assets/imgs/usuarios/img/backgrund.png"
+          alt=""
+          class="bg-image"
+        />
+
+        <!-- Cabeçalho Superior do Painel -->
+
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="./assets/imgs/usuarios/img/logo.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Meus Usuários</h2>
+
+              <p class="header-subtitle">
+                Conecte-se, acompanhe e ajude pessoas que buscam apoio,
+                orientação e um novo olhar sobre seus relacionamentos.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-new-user">
+            <span>+</span>
+            Novo usuário
+          </button>
+        </header>
+
+        <!-- ========================================== -->
+        <!-- GRADE DE CONTEÚDO DA PÁGINA -->
+        <!-- ========================================== -->
+
+        <div class="dashboard-grid">
+          <!-- ====================================== -->
+          <!-- 1. COLUNA: LISTA DE USUÁRIOS -->
+          <!-- ====================================== -->
+
+          <section class="users-column">
+            <div class="search-row">
+              <input
+                type="text"
+                id="search"
+                placeholder="Buscar usuário..."
+                aria-label="Buscar usuário"
+              />
+
+              <button class="btn btn-light"><i aria-hidden="true" class="fa-solid fa-gear"></i> Filtros</button>
+            </div>
+
+            <div class="tab-group status-tabs">
+              <button class="tab-btn active">Todos <small>(12)</small></button>
+
+              <button class="tab-btn">
+                Em atendimento <small>(6)</small>
+              </button>
+
+              <button class="tab-btn">Solicitações <small>(3)</small></button>
+            </div>
+
+            <div class="user-list">
+              <div class="user-item">
+                <span class="avatar purple">A</span>
+
+                <div class="user-info">
+                  <b>Ana Clara</b>
+                  <small class="user-status online">● Online</small>
+                  <p>Oi! Gostei muito da sua abordagem...</p>
+                </div>
+
+                <em>2 min</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item selected">
+                <span class="avatar blue">L</span>
+
+                <div class="user-info">
+                  <b>Lucas Ferreira</b>
+                  <small class="user-status online">● Online</small>
+                  <p>Pode me ajudar com uma dúvida...</p>
+                </div>
+
+                <em>15 min</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item">
+                <span class="avatar pink">C</span>
+
+                <div class="user-info">
+                  <b>Camila Santos</b>
+                  <small class="user-status busy">● Em atendimento</small>
+                  <p>Obrigada pela conversa de hoje!</p>
+                </div>
+
+                <em>32 min</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item">
+                <span class="avatar orange">R</span>
+
+                <div class="user-info">
+                  <b>Rodrigo Mendes</b>
+                  <small class="user-status busy">● Em atendimento</small>
+                  <p>Vou pensar sobre o que você falou...</p>
+                </div>
+
+                <em>1 h</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item">
+                <span class="avatar gray">L</span>
+
+                <div class="user-info">
+                  <b>Larissa Oliveira</b>
+                  <small class="user-status request">
+                    Solicitação de conversa
+                  </small>
+                  <p>Olá! Gostaria de conversar sobre...</p>
+                </div>
+
+                <em>2 h</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item">
+                <span class="avatar dark">F</span>
+
+                <div class="user-info">
+                  <b>Felipe Souza</b>
+                  <small class="user-status offline">● Offline</small>
+                  <p>Tudo bem? Queria tirar uma dúvida...</p>
+                </div>
+
+                <em>3 h</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item">
+                <span class="avatar gray">G</span>
+
+                <div class="user-info">
+                  <b>Giovana Lima</b>
+                  <small class="user-status offline">● Offline</small>
+                  <p>Podemos conversar mais tarde?</p>
+                </div>
+
+                <em>5 h</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+
+              <div class="user-item">
+                <span class="avatar navy">B</span>
+
+                <div class="user-info">
+                  <b>Bruno Alves</b>
+                  <small class="user-status offline">● Offline</small>
+                  <p>Muito obrigado pela ajuda!</p>
+                </div>
+
+                <em>6 h</em>
+                <button class="favorite" aria-label="Favoritar"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <span class="chevron">›</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- 2. COLUNA: CONVERSA -->
+          <!-- ====================================== -->
+
+          <section class="card conversation-card">
+            <div class="conversation-header">
+              <div class="conversation-user">
+                <span class="avatar large blue">L</span>
+
+                <div>
+                  <h3>Lucas Ferreira <i aria-hidden="true" class="fa-solid fa-check"></i></h3>
+
+                  <p>
+                    24 anos • Suzano - SP
+                    <span class="user-status online">● Online</span>
+                  </p>
+
+                  <span class="tag purple"><i aria-hidden="true" class="fa-solid fa-user"></i> Em atendimento</span>
+                </div>
+              </div>
+
+              <div class="conversation-actions">
+                <button aria-label="Ligar"><i aria-hidden="true" class="fa-solid fa-phone"></i></button>
+                <button aria-label="Chamada de vídeo"><i aria-hidden="true" class="fa-solid fa-video"></i></button>
+                <button aria-label="Mais opções">•••</button>
+              </div>
+            </div>
+
+            <div class="messages">
+              <div class="message received">
+                <span class="avatar mini blue">L</span>
+
+                <div class="bubble">
+                  <p>
+                    Oi, Beatriz! Eu tô um pouco perdido e queria sua ajuda.
+                    Estou começando a me conhecer melhor e queria saber como
+                    lidar com a ansiedade no trabalho...
+                  </p>
+
+                  <time>14:23</time>
+                </div>
+              </div>
+
+              <div class="message sent">
+                <div class="bubble">
+                  <p>
+                    Oi, Lucas! <i aria-hidden="true" class="fa-solid fa-heart"></i> Que bom que você veio conversar. A ansiedade
+                    no trabalho é algo super comum, e a gente pode trabalhar
+                    isso juntos. Você já consegue identificar o que mais te
+                    afeta?
+                  </p>
+
+                  <time>14:26</time>
+                </div>
+              </div>
+
+              <div class="message received">
+                <span class="avatar mini blue">L</span>
+
+                <div class="bubble">
+                  <p>
+                    Acho que é a pressão e o medo de não dar conta... Às vezes
+                    fico muito ansioso antes de reuniões.
+                  </p>
+                </div>
+              </div>
+
+              <div class="attachment">
+                <span><i aria-hidden="true" class="fa-solid fa-file-lines"></i></span>
+                <b>Ansiedade no trabalho</b> - dicas.pdf
+                <span class="file-size">2.4 MB ⬇</span>
+              </div>
+            </div>
+
+            <div class="message-input">
+              <span><i aria-hidden="true" class="fa-solid fa-paperclip"></i></span>
+
+              <input
+                type="text"
+                placeholder="Digite sua mensagem..."
+                aria-label="Digite sua mensagem"
+              />
+
+              <button aria-label="Enviar"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- 3. BLOCO: HISTÓRICO DE INTERAÇÕES -->
+          <!-- ====================================== -->
+
+          <section class="card history-card">
+            <div class="card-header">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-clock"></i></span>
+                Histórico de interações
+              </h3>
+            </div>
+
+            <div class="history-item">
+              <strong>12/07/2025</strong>
+              <p>Primeiro contato • Solicitação de conversa</p>
+            </div>
+
+            <div class="history-item">
+              <strong>12/07/2025</strong>
+              <p>Encontro • Conversa sobre ansiedade</p>
+            </div>
+
+            <div class="history-item">
+              <strong>10/07/2025</strong>
+              <p>Postagem curtida • Conteúdo de autoestima</p>
+            </div>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- 4. BLOCO: EVOLUÇÃO / ACOMPANHAMENTO -->
+          <!-- ====================================== -->
+
+          <section class="card evolution-card">
+            <div class="card-header">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-chart-column"></i></span>
+                Evolução / Acompanhamento
+              </h3>
+            </div>
+
+            <svg
+              class="evolution-chart"
+              viewBox="0 0 300 90"
+              role="img"
+              aria-label="Evolução do acompanhamento"
+            >
+              <polyline
+                points="5,70 55,40 105,55 155,30 205,45 255,18 295,55"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+              />
+
+              <g fill="currentColor">
+                <circle cx="5" cy="70" r="4" />
+                <circle cx="55" cy="40" r="4" />
+                <circle cx="105" cy="55" r="4" />
+                <circle cx="155" cy="30" r="4" />
+                <circle cx="205" cy="45" r="4" />
+                <circle cx="255" cy="18" r="4" />
+                <circle cx="295" cy="55" r="4" />
+              </g>
+            </svg>
+
+        <div class="evolution-stats">
+          <p class="stat-line"><i aria-hidden="true" class="fa-solid fa-calendar-days"></i> 3 encontros</p>
+          <p class="stat-line"><i aria-hidden="true" class="fa-solid fa-circle-check"></i> 2 tarefas concluídas</p>
+          <p class="stat-line">⭐ 1 evolução significativa</p>
+        </div>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- 5. BLOCO: SOLICITAÇÕES DE CONVERSA -->
+          <!-- ====================================== -->
+
+          <section class="card requests-card">
+            <div class="card-header">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+                Solicitações de conversa
+              </h3>
+
+              <a href="./comunidade.html" class="link-action">
+                Ver todas
+                <span class="arrow">&gt;</span>
+              </a>
+            </div>
+
+            <div class="requests-body">
+              <div class="avatar-stack">
+                <span class="avatar gray">L</span>
+                <span class="avatar purple">M</span>
+              </div>
+
+              <p>
+                <b>Larissa Oliveira, Mariana Alves e mais 1 pessoa</b> querem
+                iniciar uma conversa com você.
+              </p>
+
+              <button class="btn btn-primary btn-sm">Responder</button>
+            </div>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- 6. BLOCO: OBSERVAÇÕES -->
+          <!-- ====================================== -->
+
+          <section class="card notes-card">
+            <div class="card-header">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-pen-to-square"></i></span>
+                Observações
+              </h3>
+
+              <a href="./dashboard-profissional.html" class="link-action">
+                <i aria-hidden="true" class="fa-solid fa-pen"></i> Editar
+              </a>
+            </div>
+
+            <p class="about-text">
+              Paciente muito receptivo, demonstra interesse em aprender e
+              evoluir. Se sente mais confortável em conversas no período da
+              noite.
+            </p>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- 7. COLUNA: DETALHES DO USUÁRIO -->
+          <!-- ====================================== -->
+
+          <aside class="details-column">
+            <div class="card details-title">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-user"></i></span>
+                Dados do usuário
+              </h3>
+
+              <button class="link-action"><i aria-hidden="true" class="fa-solid fa-pen"></i> Editar</button>
+            </div>
+
+            <div class="card profile-summary">
+              <span class="avatar large blue">L</span>
+
+              <div>
+                <strong>Lucas Ferreira <i aria-hidden="true" class="fa-solid fa-check"></i></strong>
+
+                <p>24 anos • Suzano - SP</p>
+
+                <span class="tag purple"><i aria-hidden="true" class="fa-solid fa-user"></i> Em atendimento</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="about-text">
+                Gosto de aprender coisas novas, sou curioso e sempre busco
+                evoluir. Tenho um pouco de dificuldade com ansiedade, mas estou
+                trabalhando nisso.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-clipboard-list"></i></span>
+                  Questionário respondido
+                </h3>
+              </div>
+
+              <div class="q-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="8"
+                  aria-valuemin="0"
+                  aria-valuemax="10"
+                  aria-label="Perguntas respondidas"
+                >
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+
+                <small>8/10</small>
+              </div>
+
+              <dl class="answers">
+                <dt><i aria-hidden="true" class="fa-solid fa-bullseye"></i> Principais objetivos</dt>
+                <dd>
+                  Melhorar minha autoestima, lidar com a ansiedade e construir
+                  relações mais saudáveis.
+                </dd>
+
+                <dt><i aria-hidden="true" class="fa-solid fa-lightbulb"></i> Áreas de interesse</dt>
+                <dd>Relacionamentos, carreira e saúde mental.</dd>
+
+                <dt><i aria-hidden="true" class="fa-solid fa-heart"></i> Como prefere ser atendido(a)?</dt>
+                <dd>Conversas online, com materiais de apoio.</dd>
+              </dl>
+
+              <button class="btn btn-soft btn-block">
+                Ver questionário completo
+              </button>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/usuarios.js"></script>
+  </body>
+</html>

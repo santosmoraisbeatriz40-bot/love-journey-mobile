@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Journey - Minhas emoções</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./vendor/fontawesome/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/dashboard-emocoes.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+  <body>
+    <!-- CONTAINER PRINCIPAL DO DASHBOARD -->
+    <div class="app-layout">
+      <!-- ========================================== -->
+      <!-- NAVEGAÇÃO LATERAL (SIDEBAR)                -->
+      <!-- ========================================== -->
+      <aside class="sidebar">
+        <div class="brand">
+          <img
+            src="./assets/imgs/esther/img/iconelogo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          />
+          <h1 class="brand-name">Love Journey</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="./dashboard-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-house"></i></span> Início
+              </a>
+            </li>
+            <li>
+              <a href="./diario-do-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-book"></i></span> Diário do casal
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard-emocoes.html" class="nav-link active">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-face-laugh"></i></span> Minhas emoções
+              </a>
+            </li>
+            <li>
+              <a href="./desafios-do-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-bullseye"></i></span> Desafios
+              </a>
+            </li>
+            <li>
+              <a href="./apoio.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-user"></i></span> Apoio
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Card de rodapé da Sidebar -->
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- CONTEÚDO PRINCIPAL (MAIN CONTENT)          -->
+      <!-- ========================================== -->
+      <main class="main-content">
+        <img
+          src="./assets/imgs/esther/img/background.png.jpg"
+          alt="Plano de fundo Love Journey"
+          class="bg-image"
+        />
+
+        <!-- Cabeçalho Superior do Painel -->
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="./assets/imgs/esther/img/iconelogo.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Minhas emoções</h2>
+              <p class="header-subtitle">
+                Entenda o que você sente, reconheça seus padrões e compartilhe o
+                que te faz bem.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-top-register" type="button">
+            <span>+</span> Registrar emoção
+          </button>
+        </header>
+
+        <!-- Grade de Conteúdo do Dashboard -->
+        <div class="dashboard-grid">
+          <!-- 1. BLOCO: COMO VOCÊ ESTÁ SE SENTINDO HOJE? -->
+          <section class="card emotion-selector-card">
+            <div class="card-header">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-camera"></i></span> Como você está se sentindo
+                hoje?
+              </h3>
+            </div>
+            <p class="card-instruction">
+              Escolha a emoção que mais representa o seu momento agora:
+            </p>
+
+            <div class="emotions-grid" id="emotions-grid">
+              <button class="emotion-item" type="button" data-emotion="Feliz" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-smile"></i></span>
+                <span class="label">Feliz</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Tranquila" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-smile"></i></span>
+                <span class="label">Tranquila</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Neutra" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-meh"></i></span>
+                <span class="label">Neutra</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Preocupada" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-frown"></i></span>
+                <span class="label">Preocupada</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Triste" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-sad-tear"></i></span>
+                <span class="label">Triste</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Calma" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-smile-beam"></i></span>
+                <span class="label">Calma</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Irritada" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-angry"></i></span>
+                <span class="label">Irritada</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Ansiosa" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-grimace"></i></span>
+                <span class="label">Ansiosa</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Animada" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-grin-stars"></i></span>
+                <span class="label">Animada</span>
+              </button>
+              <button class="emotion-item" type="button" data-emotion="Apaixonada" aria-pressed="false">
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-grin-hearts"></i></span>
+                <span class="label">Apaixonada</span>
+              </button>
+            </div>
+
+            <button class="btn btn-success btn-block" id="btn-save-emotion" type="button">
+              <span><i aria-hidden="true" class="fa-solid fa-camera"></i></span> Registrar emoção
+            </button>
+          </section>
+
+          <!-- 2. BLOCO: MEU HUMOR NA SEMANA -->
+          <section class="card weekly-mood-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-chart-column"></i></span> Meu humor na semana</h3>
+            </div>
+            <p class="card-instruction">
+              Veja como suas emoções se comportaram nos últimos 7 dias.
+            </p>
+
+            <!-- Gráfico de Pontos / Matriz Semanal -->
+            <div class="weekly-chart">
+              <div class="chart-matrix">
+                <div class="chart-col">
+                  <span class="dot pink"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="day-label">Seg</span>
+                </div>
+                <div class="chart-col">
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot teal"></span>
+                  <span class="dot-space"></span>
+                  <span class="day-label">Ter</span>
+                </div>
+                <div class="chart-col">
+                  <span class="dot-space"></span>
+                  <span class="dot pink"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="day-label">Qua</span>
+                </div>
+                <div class="chart-col">
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot blue"></span>
+                  <span class="day-label">Qui</span>
+                </div>
+                <div class="chart-col">
+                  <span class="dot-space"></span>
+                  <span class="dot teal"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="day-label">Sex</span>
+                </div>
+                <div class="chart-col">
+                  <span class="dot pink"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="day-label">Sáb</span>
+                </div>
+                <div class="chart-col">
+                  <span class="dot-space"></span>
+                  <span class="dot purple"></span>
+                  <span class="dot-space"></span>
+                  <span class="dot-space"></span>
+                  <span class="day-label">Dom</span>
+                </div>
+              </div>
+
+              <!-- Legendas do gráfico -->
+              <div class="chart-legend">
+                <span class="legend-item"
+                  ><span class="legend-dot pink"></span> Feliz</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-dot teal"></span> Tranquila</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-dot blue"></span> Ansiosa</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-dot purple"></span> Triste</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. BLOCO: RESUMO EMOCIONAL -->
+          <section class="card summary-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span> Resumo emocional</h3>
+            </div>
+
+            <div class="general-state">
+              <div class="donut-small pink-stroke"></div>
+              <div class="state-text">
+                <h4>Estado geral</h4>
+                <p>Você tem se sentido bem na maior parte dos momentos.</p>
+              </div>
+            </div>
+
+            <div class="tip-box">
+              <h5><span class="tip-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span> Dica do dia</h5>
+              <p>
+                Seja gentil com o que você sente. Todas as emoções são válidas.
+              </p>
+            </div>
+          </section>
+
+          <!-- 4. BLOCO: HISTÓRICO DE EMOÇÕES -->
+          <section class="card history-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-chart-column"></i></span> Histórico de emoções</h3>
+              <button class="btn btn-secondary btn-sm" id="btn-view-all" type="button">
+                Ver todas
+              </button>
+            </div>
+            <p class="card-instruction">
+              Veja como você se sentiu nos últimos registros.
+            </p>
+
+            <div class="history-carousel-wrapper">
+              <div class="history-carousel" id="history-carousel">
+                <!-- Card 1 -->
+                <article class="history-item theme-pink">
+                  <span class="item-date">12/07/2026</span>
+                  <div class="item-emoji"><i aria-hidden="true" class="fa-regular fa-face-smile"></i></div>
+                  <h4 class="item-title">Feliz</h4>
+                  <p class="item-text">Foi um dia leve e especial, com ele.</p>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="history-item theme-purple">
+                  <span class="item-date">11/07/2026</span>
+                  <div class="item-emoji"><i aria-hidden="true" class="fa-regular fa-face-smile"></i></div>
+                  <h4 class="item-title">Tranquila</h4>
+                  <p class="item-text">
+                    Consegui finalizar meus estudos e me senti orgulhosa.
+                  </p>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="history-item theme-teal">
+                  <span class="item-date">10/07/2026</span>
+                  <div class="item-emoji"><i aria-hidden="true" class="fa-regular fa-face-grimace"></i></div>
+                  <h4 class="item-title">Ansiosa</h4>
+                  <p class="item-text">
+                    Muitas coisas na cabeça, mas estou tentando respirar.
+                  </p>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="history-item theme-yellow">
+                  <span class="item-date">09/07/2026</span>
+                  <div class="item-emoji"><i aria-hidden="true" class="fa-regular fa-face-meh"></i></div>
+                  <h4 class="item-title">Neutra</h4>
+                  <p class="item-text">Dia comum, com altos e baixos.</p>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="history-item theme-pink-light">
+                  <span class="item-date">08/07/2026</span>
+                  <div class="item-emoji"><i aria-hidden="true" class="fa-regular fa-face-grin-hearts"></i></div>
+                  <h4 class="item-title">Apaixonada</h4>
+                  <p class="item-text">Só queria ele por perto o dia todo.</p>
+                </article>
+              </div>
+            </div>
+
+            <!-- Navegação do Carrossel -->
+            <div class="carousel-controls">
+              <button
+                class="nav-arrow"
+                id="carousel-prev"
+                type="button"
+                aria-label="Anterior"
+              >
+                &lt;
+              </button>
+              <div class="carousel-dots" aria-label="Páginas do histórico"></div>
+              <button class="nav-arrow" id="carousel-next" type="button" aria-label="Próximo">
+                &gt;
+              </button>
+            </div>
+          </section>
+
+          <!-- 5. BLOCO: EMOÇÕES POR CATEGORIA -->
+          <section class="card category-card" id="grafico">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-chart-pie"></i></span> Emoções por categoria</h3>
+            </div>
+
+            <div class="category-content">
+              <!-- Gráfico Donut em CSS puro -->
+              <div class="donut-chart-container">
+                <div class="donut-chart"></div>
+              </div>
+
+              <ul class="category-list">
+                <li>
+                  <span class="cat-dot pink"></span>
+                  <span class="cat-name">Felicidade</span>
+                  <span class="cat-percentage">32%</span>
+                </li>
+                <li>
+                  <span class="cat-dot teal"></span>
+                  <span class="cat-name">Tranquilidade</span>
+                  <span class="cat-percentage">24%</span>
+                </li>
+                <li>
+                  <span class="cat-dot purple"></span>
+                  <span class="cat-name">Ansiedade</span>
+                  <span class="cat-percentage">18%</span>
+                </li>
+                <li>
+                  <span class="cat-dot blue"></span>
+                  <span class="cat-name">Tristeza</span>
+                  <span class="cat-percentage">12%</span>
+                </li>
+                <li>
+                  <span class="cat-dot orange"></span>
+                  <span class="cat-name">Outras</span>
+                  <span class="cat-percentage">14%</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 6. BLOCO: SEUS GATILHOS E PREFERÊNCIAS -->
+          <section class="card triggers-card">
+            <div class="card-header">
+              <h3>
+                <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span> Seus gatilhos e preferências
+              </h3>
+            </div>
+            <p class="card-instruction">
+              O que te faz se sentir bem, acalma ou te deixa sobrecarregada.
+            </p>
+
+            <div class="triggers-wrapper">
+              <!-- Te faz bem -->
+              <div class="trigger-row">
+                <span class="trigger-label good">
+                  <span class="heart-icon"><i aria-hidden="true" class="fa-solid fa-heart"></i></span> Te faz bem
+                </span>
+                <div class="tag-group">
+                  <span class="tag">Música</span>
+                  <span class="tag">Desenhar</span>
+                  <span class="tag">Ele por perto</span>
+                  <span class="tag">Séries</span>
+                  <span class="tag">Tempo sozinha</span>
+                </div>
+              </div>
+
+              <!-- Pode te deixar ansiosa -->
+              <div class="trigger-row">
+                <span class="trigger-label bad">
+                  <span class="alert-icon">▲</span> Pode te deixar ansiosa
+                </span>
+                <div class="tag-group">
+                  <span class="tag">Cobranças</span>
+                  <span class="tag">Pressão</span>
+                  <span class="tag">Multitarefas</span>
+                  <span class="tag">Incerteza</span>
+                  <span class="tag">Falta de sono</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. BLOCO: SUA JORNADA EMOCIONAL -->
+          <section class="card journey-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-flag"></i></span> Sua jornada emocional</h3>
+            </div>
+            <p class="card-instruction">
+              Evolução das suas emoções ao longo do tempo.
+            </p>
+
+            <div class="quote-box">
+              <span class="quote-heart"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+              <p class="quote-text">
+                "Você já sentiu dias difíceis, mas também viveu muitos dias
+                incríveis."
+              </p>
+            </div>
+
+            <a href="#grafico" class="link-action">
+              Ver gráfico completo <span class="arrow">&gt;</span>
+            </a>
+          </section>
+        </div>
+        <!-- /dashboard-grid -->
+      </main>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./js/LJ.script.js"></script>
+  </body>
+</html>

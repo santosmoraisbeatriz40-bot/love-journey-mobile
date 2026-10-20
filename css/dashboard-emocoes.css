@@ -1,0 +1,897 @@
+/* ==========================================================================
+   1. VARIÁVEIS DO TEMA E RESET DE ESTILOS
+   ========================================================================== */
+/* Cores e fontes: css/base.css · regras comuns da sidebar: css/sidebar.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: #f4f5f7;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ==========================================================================
+   2. LAYOUT PRINCIPAL (APP LAYOUT)
+   ========================================================================== */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR (MENU LATERAL)
+   -------------------------------------------------------------------------- */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 2.5rem;
+}
+
+.brand-logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f49aaa;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+
+
+.sidebar-footer-card {
+  background-color: #fbcfe8;
+  padding: 1.2rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   CONTEÚDO PRINCIPAL (MAIN CONTENT)
+   -------------------------------------------------------------------------- */
+.main-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  position: relative;
+  overflow-y: auto;
+  z-index: 1;
+  background-size: cover; /* Faz a imagem cobrir toda a área sem distorcer */
+  background-position: center; /* Centraliza a imagem na tela */
+  background-repeat: no-repeat; /* Impede que a imagem fique se repetindo */
+  background-attachment: fixed; /* Deixa o fundo fixo enquanto rola a página (opcional) */
+}
+.bg-image {
+  position: absolute; /* Faz a imagem ficar atrás do conteúdo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem cobrindo toda a tela */
+  z-index: -1; /* Garante que a imagem fique atrás dos cartões e textos */
+  pointer-events: none; /* Evita que a imagem atrapalhe os cliques na página */
+}
+/* Cabeçalho */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.page-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.header-subtitle {
+  color: #e6007f;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Botões Globais */
+.btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-pink);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(242, 82, 135, 0.4);
+}
+
+.btn-success {
+  background-color: var(--secondary-green);
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: var(--secondary-hover);
+}
+
+.btn-secondary {
+  background-color: #2e7d32;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ==========================================================================
+   3. DASHBOARD GRID & CARDS
+   ========================================================================== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-instruction {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   DISTRIBUIÇÃO DOS CARDS NO GRID
+   -------------------------------------------------------------------------- */
+.emotion-selector-card {
+  grid-column: span 6;
+}
+.weekly-mood-card {
+  grid-column: span 3;
+}
+.summary-card {
+  grid-column: span 3;
+}
+
+.history-card {
+  grid-column: span 8;
+}
+.category-card {
+  grid-column: span 4;
+}
+
+.triggers-card {
+  grid-column: span 7;
+}
+.journey-card {
+  grid-column: span 5;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 1: SELETOR DE EMOÇÕES
+   -------------------------------------------------------------------------- */
+.emotions-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.emotion-item {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+}
+
+.emotion-item:hover {
+  background-color: #fce4ec;
+}
+
+.emotion-item.selected {
+  background-color: #f8bbd0;
+  outline: 2px solid var(--primary-pink);
+}
+
+.emotion-item .emoji {
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.emotion-item .label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   CARD 2: MEU HUMOR NA SEMANA
+   -------------------------------------------------------------------------- */
+.weekly-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chart-matrix {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.chart-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-space {
+  width: 10px;
+  height: 10px;
+}
+
+.day-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.dot.pink {
+  background-color: var(--primary-pink);
+}
+.dot.teal {
+  background-color: var(--secondary-green);
+}
+.dot.blue {
+  background-color: #42a5f5;
+}
+.dot.purple {
+  background-color: #ab47bc;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.75rem;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-dot.pink {
+  background-color: var(--primary-pink);
+}
+.legend-dot.teal {
+  background-color: var(--secondary-green);
+}
+.legend-dot.blue {
+  background-color: #42a5f5;
+}
+.legend-dot.purple {
+  background-color: #ab47bc;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 3: RESUMO EMOCIONAL
+   -------------------------------------------------------------------------- */
+.general-state {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1rem;
+}
+
+.donut-small {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 6px solid var(--primary-pink);
+  border-right-color: transparent;
+  flex-shrink: 0;
+}
+
+.state-text h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.state-text p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.tip-box {
+  background-color: #fce4ec;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.tip-box h5 {
+  color: var(--primary-pink);
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tip-box p {
+  font-size: 0.75rem;
+  color: #880e4f;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 4: HISTÓRICO DE EMOÇÕES
+   -------------------------------------------------------------------------- */
+.history-carousel-wrapper {
+  overflow: hidden;
+  padding: 4px 0;
+}
+
+.history-carousel {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.history-item {
+  min-width: 140px;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.history-item .item-date {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.history-item .item-emoji {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.history-item .item-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.history-item .item-text {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  line-height: 1.3;
+}
+
+.history-item .item-heart {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 0.8rem;
+  color: var(--primary-pink);
+}
+
+/* Variações de Cores das Cartas do Histórico */
+.theme-pink {
+  background-color: #fce4ec;
+}
+.theme-purple {
+  background-color: #f3e5f5;
+}
+.theme-teal {
+  background-color: #e0f2f1;
+}
+.theme-yellow {
+  background-color: #fffde7;
+}
+.theme-pink-light {
+  background-color: #fff0f5;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.nav-arrow {
+  background: transparent;
+  color: var(--primary-pink);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot-nav {
+  width: 8px;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.dot-nav.active {
+  background-color: var(--primary-pink);
+}
+
+.dot-nav { border: 0; padding: 0; cursor: pointer; }
+.nav-arrow:disabled { opacity: .35; cursor: default; }
+.emotion-status { min-height: 1.25em; margin: -10px 0 12px; color: var(--primary-pink); font-size: .82rem; }
+.emotion-dialog { border: 0; border-radius: 18px; padding: 0; margin: auto; width: min(540px, calc(100% - 28px)); max-height: 88vh; color: var(--text-primary); box-shadow: 0 20px 70px rgba(37, 20, 53, .28); }
+.emotion-dialog::backdrop { background: rgba(36, 24, 51, .58); backdrop-filter: blur(3px); }
+.emotion-dialog-card { padding: 24px; max-height: 88vh; overflow: auto; font-family: var(--font-family); }
+.emotion-dialog-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.emotion-dialog-card h2 { color: #2c3e50; font-size: 1.2rem; }
+.emotion-dialog-kicker { color: var(--primary-pink); font-size: .68rem; font-weight: 700; letter-spacing: .08em; }
+.emotion-dialog-card header button { color: #6d6071; background: transparent; font-size: 1.8rem; line-height: 1; }
+.emotion-dialog-content { font-size: .9rem; line-height: 1.6; }
+.emotion-field { display: block; margin-top: 12px; color: #514653; font-size: .83rem; font-weight: 600; }
+.emotion-field textarea, .emotion-field select { display: block; width: 100%; margin-top: 5px; padding: 10px 12px; border: 1px solid #ded5df; border-radius: 10px; background: white; color: #302a39; font: 400 .9rem var(--font-family); }
+.emotion-field textarea { resize: vertical; }
+.emotion-dialog-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.emotion-dialog-actions button { border: 0; border-radius: 10px; padding: 10px 16px; font: 600 .85rem var(--font-family); cursor: pointer; }
+.emotion-primary { background: var(--primary-pink); color: #fff; }
+.emotion-secondary { background: #f4edf2; color: #514653; }
+.all-emotion-history { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.all-emotion-record { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; padding: 12px; border-radius: 11px; background: #fff4f7; }
+.all-emotion-record strong, .all-emotion-record small { display: block; }
+.all-emotion-record small { color: var(--text-muted); font-size: .72rem; }
+.all-emotion-record p { margin-top: 5px; color: var(--text-light); font-size: .82rem; }
+.all-emotion-record button { flex: 0 0 auto; padding: 5px 0; background: transparent; color: #a32653; font-size: .76rem; font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   CARD 5: EMOÇÕES POR CATEGORIA
+   -------------------------------------------------------------------------- */
+.category-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.donut-chart-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.donut-chart {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--primary-pink) 0% 32%,
+    var(--secondary-green) 32% 56%,
+    #ab47bc 56% 74%,
+    #42a5f5 74% 86%,
+    #ffa726 86% 100%
+  );
+  mask: radial-gradient(circle 32px, transparent 99%, #000 100%);
+  -webkit-mask: radial-gradient(circle 32px, transparent 99%, #000 100%);
+}
+
+.category-list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.category-list li {
+  display: flex;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+.cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.cat-dot.pink {
+  background-color: var(--primary-pink);
+}
+.cat-dot.teal {
+  background-color: var(--secondary-green);
+}
+.cat-dot.purple {
+  background-color: #ab47bc;
+}
+.cat-dot.blue {
+  background-color: #42a5f5;
+}
+.cat-dot.orange {
+  background-color: #ffa726;
+}
+
+.cat-name {
+  flex: 1;
+}
+.cat-percentage {
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 6: SEUS GATILHOS E PREFERÊNCIAS
+   -------------------------------------------------------------------------- */
+.triggers-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trigger-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trigger-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trigger-label.good {
+  color: var(--primary-pink);
+}
+.trigger-label.bad {
+  color: #d32f2f;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  border: 1px solid var(--primary-pink);
+  color: var(--primary-pink);
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  background-color: #fff;
+}
+
+.trigger-row:last-child .tag {
+  border-color: #ef5350;
+  color: #ef5350;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 7: SUA JORNADA EMOCIONAL
+   -------------------------------------------------------------------------- */
+.quote-box {
+  background-color: #fce4ec;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.quote-heart {
+  color: var(--primary-pink);
+  font-size: 1.2rem;
+}
+
+.quote-text {
+  font-size: 0.8rem;
+  color: #c2185b;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.link-action {
+  display: inline-block;
+  color: var(--primary-pink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link-action:hover {
+  color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .emotion-selector-card {
+    grid-column: span 12;
+  }
+  .weekly-mood-card {
+    grid-column: span 6;
+  }
+  .summary-card {
+    grid-column: span 6;
+  }
+  .history-card {
+    grid-column: span 12;
+  }
+  .category-card {
+    grid-column: span 12;
+  }
+  .triggers-card {
+    grid-column: span 12;
+  }
+  .journey-card {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .main-content {
+    padding: 1rem;
+  }
+  .emotions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .trigger-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .trigger-label {
+    width: 100%;
+  }
+}
+/* Ajustes finais para tablet e celular */
+@media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .app-layout {
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    padding: 1rem;
+    gap: 0.75rem;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .brand {
+    justify-content: center;
+    margin: 0;
+  }
+  .sidebar-nav {
+    width: 100%;
+    min-width: 0;
+  }
+  .sidebar-nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.4rem;
+    width: 100%;
+  }
+  .sidebar-nav li {
+    min-width: 0;
+  }
+  .nav-link {
+    min-width: 0;
+    min-height: 42px;
+    justify-content: center;
+    padding: 0.55rem 0.45rem;
+    gap: 0.4rem;
+    text-align: center;
+    font-size: clamp(0.7rem, 2.4vw, 0.9rem);
+    overflow-wrap: anywhere;
+  }
+  .sidebar-footer-card {
+    display: none;
+  }
+  .main-content {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    padding: clamp(0.8rem, 3.5vw, 1.4rem);
+    overflow: visible;
+  }
+  .dashboard-grid {
+    width: 100%;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .dashboard-grid > *,
+  .card,
+  .page-header > *,
+  .header-title-wrapper {
+    min-width: 0;
+  }
+  .page-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .header-title-wrapper {
+    flex: 1 1 220px;
+  }
+  .main-content img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .sidebar {
+    padding: 0.75rem;
+  }
+  .sidebar-nav ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .nav-link {
+    padding: 0.55rem 0.3rem;
+    gap: 0.35rem;
+    font-size: clamp(0.68rem, 3vw, 0.82rem);
+  }
+  .main-content {
+    padding: 0.75rem;
+  }
+  .page-header h2 {
+    font-size: clamp(1.1rem, 5vw, 1.45rem);
+  }
+  .header-logo {
+    width: 42px;
+    height: 42px;
+  }
+  .card {
+    padding: clamp(0.8rem, 4vw, 1.1rem);
+  }
+  .resources-grid,
+  .completed-grid,
+  .moments-grid,
+  .entries-grid,
+  .achievement-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+  }
+  .emotions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

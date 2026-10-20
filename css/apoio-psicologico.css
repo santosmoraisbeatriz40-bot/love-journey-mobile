@@ -1,0 +1,665 @@
+/* ==========================================================================
+   LOVE JOURNEY - ESTILO PADRÃO
+   Base idêntica à página "Minhas emoções" (LJstyle.css).
+   As seções 1 a 4 são o padrão comum a todas as páginas.
+   A seção 5 contém apenas o que é exclusivo da página "Apoio".
+   ========================================================================== */
+
+/* ==========================================================================
+   1. VARIÁVEIS DO TEMA E RESET DE ESTILOS
+   ========================================================================== */
+/* Cores e fontes: css/base.css · regras comuns da sidebar: css/sidebar.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    background-color: #f4f5f7;
+    line-height: 1.5;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* ==========================================================================
+   2. LAYOUT PRINCIPAL (APP LAYOUT)
+   ========================================================================== */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR (MENU LATERAL)
+   -------------------------------------------------------------------------- */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #f49aaa;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+
+
+.sidebar-footer-card {
+    background-color: #fbcfe8;
+    padding: 1.2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   CONTEÚDO PRINCIPAL (MAIN CONTENT)
+   -------------------------------------------------------------------------- */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 2rem 2.5rem;
+    position: relative;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.bg-image {
+    position: absolute;   /* Faz a imagem ficar atrás do conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Mantém a proporção da imagem cobrindo toda a área */
+    z-index: -1;          /* Garante que a imagem fique atrás dos cartões e textos */
+    pointer-events: none; /* Evita que a imagem atrapalhe os cliques na página */
+}
+
+/* Cabeçalho */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.page-header h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    color: #e6007f;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Botões Globais */
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-pink);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(242, 82, 135, 0.4);
+}
+
+.btn-success {
+    background-color: var(--secondary-green);
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn-secondary {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+}
+
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. DASHBOARD GRID & CARDS
+   ========================================================================== */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-instruction {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+/* Tags (usadas em gatilhos, filtros etc.) */
+.tag-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+/* Cartas coloridas (histórico, momentos, registros) */
+.theme-pink        { background-color: #fce4ec; }
+.theme-purple      { background-color: #f3e5f5; }
+.theme-teal        { background-color: #e0f2f1; }
+.theme-yellow      { background-color: #fffde7; }
+.theme-pink-light  { background-color: #fff0f5; }
+
+.item-date {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+.item-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.item-text {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    line-height: 1.3;
+}
+
+.item-heart {
+    font-size: 0.8rem;
+    color: var(--primary-pink);
+}
+
+/* Caixa de citação */
+.quote-box {
+    background-color: #fce4ec;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.quote-heart {
+    color: var(--primary-pink);
+    font-size: 1.2rem;
+}
+
+.quote-text {
+    font-size: 0.8rem;
+    color: #c2185b;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDADE (PADRÃO)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-layout { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .main-content { padding: 1rem; }
+}
+
+/* ==========================================================================
+   5. PÁGINA "APOIO" (ESTILOS EXCLUSIVOS)
+   ========================================================================== */
+
+/* Distribuição dos cards no grid */
+.mentors-card   { grid-column: span 6; }
+.talk-card      { grid-column: span 3; }
+.help-card      { grid-column: span 3; }
+.resources-card { grid-column: span 12; }
+.closing-card   { grid-column: span 12; }
+
+.card-header .btn-sm { flex-shrink: 0; }
+.btn-block { margin-top: 0; }
+
+.chevron {
+    color: var(--primary-pink);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+/* Dica (caixa rosa) */
+.tip-box {
+    background-color: #fce4ec;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.tip-box h5 {
+    color: var(--primary-pink);
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tip-box p {
+    font-size: 0.75rem;
+    color: #880e4f;
+}
+
+/* --------------------------------------------------------------------------
+   NOSSOS MENTORES
+   -------------------------------------------------------------------------- */
+.mentors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.mentor-card {
+    position: relative;
+    min-width: 0;
+    padding: 20px 12px 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.avatar-md {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--color-pink);
+    margin-bottom: 10px;
+}
+
+.mentor-card .item-text {
+    font-size: 0.78rem;
+}
+
+.mentor-focus {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.mentor-card .btn { margin-top: auto; }
+
+.favorite {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    color: var(--primary-pink);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.favorite.is-favorite { color: #d92664; }
+.favorite.is-favorite i { font-weight: 900; }
+
+/* --------------------------------------------------------------------------
+   CONVERSE COM ALGUÉM
+   -------------------------------------------------------------------------- */
+.option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: #fce4ec;
+    color: var(--text-primary);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #f8bbd0;
+}
+
+.option-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.option-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.option-text strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.option-text small {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   AJUDA RÁPIDA
+   -------------------------------------------------------------------------- */
+.help-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.help-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 4px;
+    background: transparent;
+    border-bottom: 1px solid #f1f1f1;
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.help-btn:last-child { border-bottom: none; }
+
+.help-btn:hover { color: var(--primary-pink); }
+
+.help-icon { font-size: 1rem; flex-shrink: 0; }
+
+/* --------------------------------------------------------------------------
+   RECURSOS E CONTEÚDOS
+   -------------------------------------------------------------------------- */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.resource-card {
+    min-width: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.resource-card:hover, .resource-card:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(90, 40, 70, .12); outline: 2px solid var(--primary-pink); outline-offset: 2px; }
+
+.support-dialog { border: 0; border-radius: 20px; padding: 0; margin: auto; width: min(560px, calc(100% - 28px)); max-height: min(88vh, 760px); color: var(--text-primary); box-shadow: 0 20px 70px rgba(37, 20, 53, .28); }
+.support-dialog::backdrop { background: rgba(36, 24, 51, .58); backdrop-filter: blur(3px); }
+.support-dialog-card { padding: 24px; max-height: min(88vh, 760px); overflow: auto; font-family: var(--font-family); }
+.support-dialog-card header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 18px; }
+.support-dialog-card h2 { color: #2c3e50; font-size: 1.25rem; line-height: 1.35; }
+.support-kicker { color: var(--primary-pink); letter-spacing: .08em; font-size: .68rem; font-weight: 700; margin-bottom: 4px; }
+.support-close { background: transparent; color: #6d6071; font-size: 1.8rem; line-height: 1; }
+.support-dialog-content { font-size: .9rem; line-height: 1.65; }
+.support-dialog-content > * + * { margin-top: 12px; }
+.support-dialog-content p { color: #625a65; }
+.support-dialog-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.support-dialog-actions button { border: 0; border-radius: 10px; padding: 10px 16px; font: 600 .85rem var(--font-family); cursor: pointer; }
+.support-primary { background: var(--primary-pink); color: white; }
+.support-secondary { background: #f4edf2; color: #514653; }
+.support-label { display: block; color: #514653; font-size: .83rem; font-weight: 600; margin-top: 12px; }
+.support-label input, .support-label select, .support-label textarea { display: block; width: 100%; margin-top: 5px; padding: 10px 12px; border: 1px solid #ded5df; border-radius: 10px; background: #fff; color: #302a39; font: 400 .9rem var(--font-family); }
+.support-label textarea { resize: vertical; }
+.support-prompt { padding: 13px 15px; background: #fff0f5; border-radius: 12px; }
+.support-prompt strong { color: #c52f68; }
+.support-prompt p { margin-top: 5px; color: #6b4054; font-style: italic; }
+.support-demo-note { font-size: .75rem; color: var(--text-muted) !important; }
+.support-contacts { margin-top: 20px; }
+.support-contact-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.support-contact { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; padding: 14px; border-radius: 12px; background: #fff0f5; }
+.support-contact strong, .support-contact small { display: block; }
+.support-contact small { color: var(--text-muted); font-size: .75rem; }
+.support-contact p { margin-top: 6px; font-size: .8rem; color: #625a65; }
+.support-remove { color: #a32653; background: transparent; font-size: .78rem; }
+
+.resource-card img {
+    width: 100%;
+    height: 110px;
+    display: block;
+    object-fit: cover;
+}
+
+.resource-body { padding: 12px; }
+
+.resource-card .item-title {
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.resource-type {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+}
+
+/* --------------------------------------------------------------------------
+   JUNTOS POR UM RELACIONAMENTO SAUDÁVEL
+   -------------------------------------------------------------------------- */
+.closing-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.closing-text { flex: 1; min-width: 0; }
+
+.closing-card .card-instruction {
+    max-width: 520px;
+    margin-bottom: 1rem;
+}
+
+.closing-card .tip-box {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVIDADE DA PÁGINA
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .mentors-card { grid-column: span 12; }
+    .talk-card    { grid-column: span 6; }
+    .help-card    { grid-column: span 6; }
+
+    .resources-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .talk-card,
+    .help-card { grid-column: span 12; }
+
+    .mentors-grid { grid-template-columns: 1fr; }
+    .resources-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .closing-card { flex-direction: column; align-items: stretch; }
+    .closing-card .tip-box { width: 100%; }
+}
+/* Ajustes finais para tablet e celular */
+@media (max-width: 768px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  .app-layout { width: 100%; min-height: 100vh; flex-direction: column; }
+  .sidebar {
+    width: 100%; min-width: 0; min-height: 0; height: auto;
+    padding: 1rem; gap: .75rem; flex-direction: column; justify-content: flex-start;
+  }
+  .brand { justify-content: center; margin: 0; }
+  .sidebar-nav { width: 100%; min-width: 0; }
+  .sidebar-nav ul {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: .4rem; width: 100%;
+  }
+  .sidebar-nav li { min-width: 0; }
+  .nav-link {
+    min-width: 0; min-height: 42px; justify-content: center;
+    padding: .55rem .45rem; gap: .4rem; text-align: center;
+    font-size: clamp(.7rem, 2.4vw, .9rem); overflow-wrap: anywhere;
+  }
+  .sidebar-footer-card { display: none; }
+  .main-content {
+    width: 100%; min-width: 0; min-height: 0; height: auto;
+    padding: clamp(.8rem, 3.5vw, 1.4rem); overflow: visible;
+  }
+  .dashboard-grid { width: 100%; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .dashboard-grid > *, .card, .page-header > *, .header-title-wrapper { min-width: 0; }
+  .page-header { flex-wrap: wrap; align-items: flex-start; gap: .8rem; }
+  .header-title-wrapper { flex: 1 1 220px; }
+  .main-content img { max-width: 100%; }
+}
+
+@media (max-width: 520px) {
+  .sidebar { padding: .75rem; }
+  .sidebar-nav ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nav-link { padding: .55rem .3rem; gap: .35rem; font-size: clamp(.68rem, 3vw, .82rem); }
+  .main-content { padding: .75rem; }
+  .page-header h2 { font-size: clamp(1.1rem, 5vw, 1.45rem); }
+  .header-logo { width: 42px; height: 42px; }
+  .card { padding: clamp(.8rem, 4vw, 1.1rem); }
+  .resources-grid, .completed-grid, .moments-grid, .entries-grid, .achievement-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+  }
+  .emotions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

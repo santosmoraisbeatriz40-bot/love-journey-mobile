@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Love Journey | Dados profissionais</title>
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/autenticacao/autenticacao.css" />
+    <link rel="stylesheet" href="./css/autenticacao/comprovantes.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+
+  <body class="corpo-comprovantes">
+    <main class="pagina-profissional">
+
+      <!-- ==========================================
+           FUNDO ANIMADO
+           ========================================== -->
+
+      <div class="fundo-animado" aria-hidden="true">
+        <span class="particula particula-1"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+        <span class="particula particula-2"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+        <span class="particula particula-3"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+        <span class="particula particula-4"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+
+        <span class="particula particula-5"><i aria-hidden="true" class="fa-solid fa-star"></i></span>
+        <span class="particula particula-6"><i aria-hidden="true" class="fa-solid fa-star"></i></span>
+
+        <span class="bolha bolha-1"></span>
+        <span class="bolha bolha-2"></span>
+        <span class="bolha bolha-3"></span>
+      </div>
+
+      <!-- ==========================================
+           DECORAÇÕES
+           ========================================== -->
+
+      <div class="decoracao decoracao-topo"></div>
+      <div class="decoracao decoracao-baixo"></div>
+
+      <!-- ==========================================
+           CONTEÚDO PRINCIPAL
+           ========================================== -->
+
+      <section class="conteudo-profissional">
+
+        <!-- LOGO -->
+
+        <div class="cabecalho-pagina">
+          <img
+            src="/assets/imgs/usuarios/img/logo_tipo.png"
+            alt="Love Journey"
+            class="logo-pagina"
+          />
+
+          <p>Complete seu perfil profissional</p>
+        </div>
+
+        <!-- ==========================================
+             ETAPAS
+             ========================================== -->
+
+        <div class="etapas">
+
+          <div class="etapa concluida">
+            <span><i aria-hidden="true" class="fa-solid fa-check"></i></span>
+            <p>Cadastro</p>
+          </div>
+
+          <div class="linha-etapa"></div>
+
+          <div class="etapa ativa">
+            <span>2</span>
+            <p>Dados profissionais</p>
+          </div>
+
+          <div class="linha-etapa"></div>
+
+          <div class="etapa">
+            <span>3</span>
+            <p>Verificação</p>
+          </div>
+
+        </div>
+
+        <!-- ==========================================
+             CARD
+             ========================================== -->
+
+        <div class="card-profissional">
+
+          <!-- CABEÇALHO -->
+
+          <div class="cabecalho-card">
+            <div class="numero-etapa">2</div>
+
+            <div>
+              <h2>Dados profissionais</h2>
+
+              <p>
+                Essas informações serão usadas para validar seu perfil.
+              </p>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               FORMULÁRIO
+               ========================================== -->
+
+          <form id="form-profissional">
+
+            <div class="grid-form">
+
+              <!-- ÁREA -->
+
+              <div class="campo-profissional">
+                <label for="area">Área de atuação</label>
+
+                <select id="area" required>
+                  <option value="">Selecione sua área</option>
+                  <option value="psicologia">Psicologia</option>
+                  <option value="terapia">Terapia</option>
+                  <option value="psiquiatria">Psiquiatria</option>
+                  <option value="nutricao">Nutrição</option>
+                  <option value="assistencia-social">
+                    Assistência Social
+                  </option>
+                  <option value="educacao">Educação</option>
+                  <option value="outra">Outra área</option>
+                </select>
+              </div>
+
+              <!-- FORMAÇÃO -->
+
+              <div class="campo-profissional">
+                <label for="formacao">Formação</label>
+
+                <input
+                  type="text"
+                  id="formacao"
+                  placeholder="Ex.: Psicologia — Universidade..."
+                  required
+                />
+              </div>
+
+              <!-- REGISTRO -->
+
+              <div class="campo-profissional">
+                <label for="registro">
+                  Registro profissional
+                  <small>quando aplicável</small>
+                </label>
+
+                <input
+                  type="text"
+                  id="registro"
+                  placeholder="Ex.: CRP, CRM, CRESS..."
+                />
+              </div>
+
+              <!-- EXPERIÊNCIA -->
+
+              <div class="campo-profissional">
+                <label for="experiencia">
+                  Experiência profissional
+                </label>
+
+                <input
+                  type="text"
+                  id="experiencia"
+                  placeholder="Ex.: 3 anos de experiência"
+                />
+              </div>
+
+            </div>
+
+            <!-- ==========================================
+                 COMPROVANTE
+                 ========================================== -->
+
+            <div class="campo-comprovante">
+
+              <div class="titulo-comprovante">
+
+                <div>
+                  <label for="arquivo">
+                    Comprovante profissional
+                  </label>
+
+                  <p>
+                    Envie um documento que comprove sua formação ou atuação.
+                  </p>
+                </div>
+
+                <span class="opcional">
+                  Obrigatório
+                </span>
+
+              </div>
+
+              <!-- ÁREA DE UPLOAD -->
+
+              <label
+                for="arquivo"
+                class="area-upload"
+                id="area-upload"
+              >
+
+                <div class="icone-upload">↑</div>
+
+                <div class="texto-upload">
+                  <strong>
+                    Arraste seu documento aqui
+                  </strong>
+
+                  <span>
+                    ou clique para selecionar
+                  </span>
+                </div>
+
+                <small>
+                  PDF, JPG ou PNG • máximo 10MB
+                </small>
+
+                <input
+                  type="file"
+                  id="arquivo"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  hidden
+                />
+
+              </label>
+
+              <p
+                class="arquivo-selecionado"
+                id="arquivo-selecionado"
+              ></p>
+
+            </div>
+
+            <!-- ==========================================
+                 SEGURANÇA
+                 ========================================== -->
+
+            <div class="aviso-seguranca">
+
+              <span><i aria-hidden="true" class="fa-solid fa-lock"></i></span>
+
+              <p>
+                Seus dados serão protegidos e utilizados somente para
+                verificação profissional.
+              </p>
+
+            </div>
+
+            <!-- ==========================================
+                 AÇÕES
+                 ========================================== -->
+
+            <div class="acoes-form">
+
+              <a
+                href="cadastro.html"
+                class="botao-voltar"
+              >
+                Voltar
+              </a>
+
+              <button
+                type="submit"
+                class="btn btn-rosa btn-finalizar"
+              >
+                Enviar para verificação
+              </button>
+
+            </div>
+
+            <p class="texto-verificacao">
+              Após o envio, seu perfil ficará
+              <strong>Em análise</strong>.
+            </p>
+
+          </form>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <script src="./js/autenticacao/comprovantes.js"></script>
+  </body>
+</html>

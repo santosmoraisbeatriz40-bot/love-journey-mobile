@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Love Journey - Diário com a IA">
+  <meta name="keywords" content="Relacionamento, Amor, Diário, IA">
+
+  <title>Diário com a IA | Love Journey</title>
+
+  <link rel="icon" href="./assets/imgs/jadi/img/logolove.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="./vendor/fonts/poppins/fonts.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./vendor/fontawesome/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+  <link rel="stylesheet" href="./css/diario-com-ia.css">
+
+  <script src="./js/diario-com-ia.js" defer></script>
+  <script src="./app/app-android.js"></script>
+  </head>
+
+<body>
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div>
+        <div class="brand">
+          <img
+            src="./assets/imgs/chatbot/logo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          >
+
+          <h1 class="brand-name">Love Journey</h1>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Menu principal">
+          <ul>
+
+            <li>
+              <a href="./dashboard-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-house"></i></span>
+                Início
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./diario-do-casal.html"
+                class="nav-link active"
+                aria-current="page"
+              >
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-book"></i></span>
+                Diários
+              </a>
+            </li>
+
+            <li>
+              <a href="./dashboard-emocoes.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-face-laugh"></i></span>
+                Minhas emoções
+              </a>
+            </li>
+
+            <li>
+              <a href="./desafios-do-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-bullseye"></i></span>
+                Desafios
+              </a>
+            </li>
+
+            <li>
+              <a href="./apoio.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-user"></i></span>
+                Apoio
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer-card">
+        <h3>Love Journey</h3>
+
+        <p>
+          Cuidar do amor é escolher um ao outro, todos os dias.
+        </p>
+      </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+
+      <img
+        src="./assets/imgs/chatbot/imagemfundo.jpeg"
+        alt=""
+        class="bg-image"
+      >
+
+
+      <!-- CABEÇALHO -->
+      <header class="page-header">
+
+        <div class="header-title-wrapper">
+
+          <img
+            src="./assets/imgs/chatbot/logo.png"
+            alt="Logo Love Journey"
+            class="header-logo"
+          >
+
+          <div>
+
+            <h2>Diário com a IA</h2>
+
+            <p class="header-subtitle">
+              Converse, desabafe, tire dúvidas e receba apoio.<br>
+              A nossa IA está aqui para te ouvir, sem julgamentos.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          id="btn-new-entry"
+          type="button"
+        >
+          <span>+</span>
+          Novo registro
+        </button>
+
+      </header>
+
+
+      <!-- DASHBOARD -->
+      <section class="dashboard-grid">
+
+
+        <!-- =========================
+             CHAT COM IA
+        ========================== -->
+
+        <section class="card conversation-card">
+
+          <div class="chat-toolbar">
+
+            <div class="tab-group">
+
+              <button
+                class="tab-btn active"
+                type="button"
+              >
+                <span><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+                Chat IA
+              </button>
+
+              <a
+                class="tab-btn"
+                href="./diario-do-casal.html"
+              >
+                <span><i aria-hidden="true" class="fa-solid fa-book-open"></i></span>
+                Diário
+              </a>
+
+            </div>
+
+
+            <div class="chat-tools">
+
+              <button
+                type="button"
+                aria-label="Buscar na conversa"
+              >
+                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+              </button>
+
+              <button
+                type="button"
+                aria-label="Mais opções"
+              >
+                ⋮
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- MENSAGENS -->
+          <div
+            class="messages"
+            id="chat-messages"
+          >
+
+            <div class="message sent">
+
+              <div class="bubble">
+
+                <p>
+                  Hoje eu me senti insegura com algumas atitudes dele...
+                  <br>
+                  Será que estou exagerando?
+                </p>
+
+                <time>
+                  20:12 <i aria-hidden="true" class="fa-solid fa-check"></i><i aria-hidden="true" class="fa-solid fa-check"></i>
+                </time>
+
+              </div>
+
+              <span class="avatar mini me">
+                Eu
+              </span>
+
+            </div>
+
+
+            <div class="message received">
+
+              <span class="avatar mini ia">
+                IA
+              </span>
+
+              <div class="bubble">
+
+                <p>
+                  Olha, é totalmente válido você se sentir insegura.
+                  Sentimentos como esse mostram que você se importa e
+                  que tem um coração grande. <i aria-hidden="true" class="fa-solid fa-heart"></i>
+                  <br><br>
+                  Talvez seja interessante conversar com ele sobre o que
+                  te incomoda, de forma calma e sincera. Você merece se
+                  sentir ouvida e segura no relacionamento. <i aria-hidden="true" class="fa-solid fa-sparkles"></i>
+                </p>
+
+                <time>
+                  20:14
+                </time>
+
+              </div>
+
+            </div>
+
+
+            <div class="message sent">
+
+              <div class="bubble">
+
+                <p>
+                  Eu vou tentar conversar hoje.
+                  Obrigada por sempre me ouvir. <i aria-hidden="true" class="fa-solid fa-heart"></i>
+                </p>
+
+                <time>
+                  20:15 <i aria-hidden="true" class="fa-solid fa-check"></i><i aria-hidden="true" class="fa-solid fa-check"></i>
+                </time>
+
+              </div>
+
+              <span class="avatar mini me">
+                Eu
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <p
+            id="status"
+            aria-live="polite"
+          ></p>
+
+          <p class="ai-privacy-note">No plano gratuito, suas mensagens e respostas podem ser usadas pelo Google para melhorar produtos. Evite compartilhar dados pessoais. <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer">Saiba mais</a>.</p>
+
+
+          <!-- CAMPO DE MENSAGEM -->
+          <div class="message-input">
+
+            <span
+              class="attach"
+              aria-hidden="true"
+            >
+              <i aria-hidden="true" class="fa-solid fa-paperclip"></i>
+            </span>
+
+            <input
+              type="text"
+              placeholder="Digite sua mensagem..."
+              id="mensagem-input"
+              aria-label="Digite sua mensagem"
+              maxlength="2000"
+              autocomplete="off"
+            >
+
+            <button
+              type="button"
+              id="btn-submit"
+              class="send-btn"
+              aria-label="Enviar"
+            >
+              <i aria-hidden="true" class="fa-solid fa-paper-plane"></i>
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- =========================
+             COLUNA DOS CARDS
+        ========================== -->
+
+        <aside class="side-column">
+
+
+          <!-- DIÁRIO DO CASAL -->
+          <section class="card panel-card diary-card">
+
+            <div class="panel-tabs">
+
+              <button
+                class="panel-tab active"
+                type="button"
+              >
+                <span><i aria-hidden="true" class="fa-solid fa-book-open"></i></span>
+                Diário do casal
+              </button>
+
+              <button
+                class="panel-tab"
+                type="button"
+              >
+                <span><i aria-hidden="true" class="fa-solid fa-calendar-days"></i></span>
+                Histórico
+              </button>
+
+            </div>
+
+
+            <div class="diary-entry">
+
+              <span class="diary-date">
+                <i aria-hidden="true" class="fa-solid fa-calendar-days"></i> 10/07/2025
+              </span>
+
+              <button
+                class="diary-edit"
+                type="button"
+                aria-label="Editar registro"
+              >
+                <i aria-hidden="true" class="fa-solid fa-pen"></i>
+              </button>
+
+              <p class="diary-text">
+                Hoje foi um dia especial...
+                Conversamos sobre nossos sonhos e nos
+                sentimos mais próximos. <i aria-hidden="true" class="fa-solid fa-heart"></i>
+              </p>
+
+            </div>
+
+          </section>
+
+
+          <!-- EMOÇÕES -->
+          <section class="card panel-card emotions-card">
+
+            <h3 class="section-title">
+              <span><i aria-hidden="true" class="fa-regular fa-face-smile"></i></span>
+              Como você se sentiu hoje?
+            </h3>
+
+
+            <div class="emotions-row">
+
+              <button
+                class="emotion-item"
+                type="button"
+                aria-pressed="false"
+              >
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-smile"></i></span>
+                <span class="label">Feliz</span>
+              </button>
+
+              <button
+                class="emotion-item"
+                type="button"
+                aria-pressed="false"
+              >
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-smile"></i></span>
+                <span class="label">Tranquila</span>
+              </button>
+
+              <button
+                class="emotion-item"
+                type="button"
+                aria-pressed="false"
+              >
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-meh"></i></span>
+                <span class="label">Neutra</span>
+              </button>
+
+              <button
+                class="emotion-item"
+                type="button"
+                aria-pressed="false"
+              >
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-frown"></i></span>
+                <span class="label">Preocupada</span>
+              </button>
+
+              <button
+                class="emotion-item"
+                type="button"
+                aria-pressed="false"
+              >
+                <span class="emoji"><i aria-hidden="true" class="fa-regular fa-face-sad-tear"></i></span>
+                <span class="label">Triste</span>
+              </button>
+
+            </div>
+
+          </section>
+
+
+          <!-- HISTÓRICO -->
+          <section class="card panel-card history-card">
+
+            <div class="card-header">
+
+              <h3 class="section-title">
+                <span><i aria-hidden="true" class="fa-solid fa-clock"></i></span>
+                Histórico de conversas
+              </h3>
+
+              <button
+                class="btn btn-secondary btn-sm"
+                type="button"
+              >
+                Ver todas
+              </button>
+
+            </div>
+
+
+            <div class="history-list">
+
+              <button
+                class="history-item"
+                type="button"
+              >
+                <span class="history-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+
+                <span class="history-date">
+                  10/07/2025
+                </span>
+
+                <span class="history-text">
+                  Desabafei sobre uma insegurança...
+                </span>
+
+                <span class="chevron">
+                  ›
+                </span>
+              </button>
+
+
+              <button
+                class="history-item"
+                type="button"
+              >
+                <span class="history-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+
+                <span class="history-date">
+                  08/07/2025
+                </span>
+
+                <span class="history-text">
+                  Me senti muito feliz hoje!
+                </span>
+
+                <span class="chevron">
+                  ›
+                </span>
+              </button>
+
+
+              <button
+                class="history-item"
+                type="button"
+              >
+                <span class="history-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+
+                <span class="history-date">
+                  06/07/2025
+                </span>
+
+                <span class="history-text">
+                  Conversa sobre o futuro
+                </span>
+
+                <span class="chevron">
+                  ›
+                </span>
+              </button>
+
+
+              <button
+                class="history-item"
+                type="button"
+              >
+                <span class="history-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+
+                <span class="history-date">
+                  05/07/2025
+                </span>
+
+                <span class="history-text">
+                  Falei sobre os meus sonhos...
+                </span>
+
+                <span class="chevron">
+                  ›
+                </span>
+              </button>
+
+            </div>
+
+          </section>
+
+
+          <!-- ESPAÇO SEGURO -->
+          <section class="safe-card">
+
+            <h4>
+              <i aria-hidden="true" class="fa-solid fa-lock"></i> Seu espaço seguro
+            </h4>
+
+            <p>
+              Aqui você pode ser você.<br>
+              Seus sentimentos são válidos.<br>
+              Você não está sozinha. <i aria-hidden="true" class="fa-solid fa-heart"></i>
+            </p>
+
+          </section>
+
+
+          <p class="panel-brand">
+            Love Journey
+          </p>
+
+        </aside>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

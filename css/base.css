@@ -1,0 +1,80 @@
+/* ==========================================================================
+   LOVE JOURNEY — CORES E FONTES COMPARTILHADAS
+   Fonte única dos tokens usados pelas páginas. Os valores são exatamente os
+   que cada página já declarava; para mudar uma cor em todo o sistema, altere
+   aqui. Cada conjunto mantém o próprio nome de variável.
+   ========================================================================== */
+
+/* Páginas internas (casal e profissional) */
+:root {
+  /* Cores do Projeto */
+  --primary-pink: #f25287;
+  --primary-hover: #d93d70;
+  --secondary-green: #48a982;
+  --secondary-hover: #3a8c6b;
+  --bg-sidebar: #fde8ed;
+  --bg-overlay: rgba(255, 255, 255, 0.45);
+
+  --card-bg: #ffffff;
+  --card-radius: 16px;
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  /* Cores de Categorias / Tags */
+  --color-pink: #f8a5c2;
+  --color-purple: #b39ddb;
+  --color-teal: #80cbc4;
+  --color-yellow: #ffe082;
+  --color-blue: #90caf9;
+  --color-orange: #ffcc80;
+
+  /* Textos */
+  --text-primary: #333333;
+  --text-muted: #777777;
+  --text-light: #666666;
+
+  /* Fontes */
+  --font-family: "Poppins", sans-serif;
+}
+
+/* Fluxo de acesso (login, cadastro, senha) */
+:root {
+  --rosa: #F0808C;
+  --rosa-escuro: #E06070;
+
+  --verde: #4CAF77;
+  --verde-escuro: #3D8F60;
+
+  --amarelo: #F2C94C;
+
+  --roxo-texto: #6B3F5C;
+
+  --texto-escuro: #2E2A3A;
+  --texto-cinza: #6B7280;
+
+  --borda: #E2E2E2;
+
+  --branco: #FFFFFF;
+
+  --fonte-titulo:
+    'Baloo 2',
+    'Comic Sans MS',
+    cursive,
+    sans-serif;
+
+  --fonte-texto:
+    'Poppins',
+    Arial,
+    sans-serif;
+}
+
+/* Landing (index.html) */
+:root {
+  --pink: #f17f89;
+  --pink-light: #f5a0a0;
+  --green: #56a77a;
+  --yellow: #f6d363;
+  --ink: #5f625b;
+  --cream: #fff7d5;
+  --white: #fff;
+  --shadow: 0 18px 38px #504c3720;
+}

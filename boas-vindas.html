@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Love Journey | Bem-vindo</title>
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/autenticacao/autenticacao.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+
+  <body>
+    <!-- Onda decorativa -->
+    <svg
+      class="onda"
+      viewBox="0 0 1440 200"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0,80
+         C180,140 360,20 540,60
+         C720,100 900,140 1080,90
+         C1260,50 1350,70 1440,90
+         L1440,200
+         L0,200
+         Z"
+        fill="var(--rosa)"
+      />
+    </svg>
+
+    <!-- Conteúdo -->
+    <main class="container">
+      <!-- LOGO (imagem no lugar do texto) -->
+      <img
+        src="./assets/imgs/logo love journey.png"
+        alt="Love Journey"
+        class="logo-img"
+      />
+
+      <p class="saudacao">Olá, bem-vindo</p>
+
+      <p class="pergunta">Para começarmos, identifique seu perfil de acesso</p>
+
+      <div class="divisor">
+        <a href="login.html" class="link-email"> ou entre com seu e-mail </a>
+      </div>
+
+      <div class="opcoes">
+        <button type="button" class="btn btn-rosa" id="btn-profissional">
+          Sou Profissional
+        </button>
+
+        <button type="button" class="btn btn-verde" id="btn-cliente">
+          Sou Cliente
+        </button>
+      </div>
+    </main>
+
+    <script src="./js/autenticacao/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+/* ==========================================================================
+   LOVE JOURNEY — REGRAS DA SIDEBAR IGUAIS EM TODAS AS PÁGINAS INTERNAS
+   O restante da sidebar (largura, espaçamentos, responsividade) varia por
+   página e continua no CSS de cada uma.
+   ========================================================================== */
+
+.sidebar-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-link:hover {
+  background-color: rgba(242, 82, 135, 0.1);
+}
+
+.nav-link.active {
+  background-color: var(--primary-pink);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(242, 82, 135, 0.3);
+}
+
+.sidebar-footer-card h3 {
+  color: var(--primary-pink);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.sidebar-footer-card p {
+  font-size: 0.82rem;
+  color: #881337;
+  line-height: 1.4;
+}

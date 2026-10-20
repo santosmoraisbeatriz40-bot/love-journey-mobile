@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Love Journey - Comunidade Profissional</title>
+
+    <!-- Ícone do site -->
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/comunidade.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="app-layout">
+      <!-- ========================================== -->
+      <!-- NAVEGAÇÃO LATERAL (SIDEBAR) -->
+      <!-- ========================================== -->
+
+      <aside class="sidebar">
+        <div class="brand">
+          <img
+            src="/assets/imgs/miguel/img/logo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          />
+
+          <h1 class="brand-name">Love Journey</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="./dashboard-profissional.html" class="nav-link">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="8"
+                    r="3.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M5 20C5.8 16.7 8.1 15 12 15C15.9 15 18.2 16.7 19 20"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <span>Meu Perfil</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="./comunidade.html"
+                class="nav-link active"
+                aria-current="page"
+              >
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 11.5C20 15.64 16.42 19 12 19C10.72 19 9.51 18.72 8.44 18.22L4 20L5.32 16.45C4.49 15.07 4 13.45 4 11.5C4 7.36 7.58 4 12 4C16.42 4 20 7.36 20 11.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>Comunidade</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./usuarios-do-profissional.html" class="nav-link">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="9"
+                    cy="8"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M3.5 19C4.1 15.9 6 14.5 9 14.5C12 14.5 13.9 15.9 14.5 19"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M15 5.5C16.9 5.5 18.5 6.9 18.5 8.7C18.5 10.2 17.5 11.4 16.2 11.8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M16 14.5C18.7 14.7 20.2 16.2 20.5 19"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <span>Usuários</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Card de rodapé da Sidebar -->
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- CONTEÚDO PRINCIPAL -->
+      <!-- ========================================== -->
+
+      <main class="main-content">
+        <img
+          src="/assets/imgs/profissional/img/image.png"
+          alt=""
+          class="bg-image"
+        />
+
+        <!-- Cabeçalho Superior do Painel -->
+
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="/assets/imgs/logo love journey.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Comunidade Profissional</h2>
+
+              <p class="header-subtitle">
+                Troque ideias, compartilhe experiências, tire dúvidas e
+                fortaleça seus conhecimentos sobre Psicologia, saúde emocional
+                e relacionamentos.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-publish-top">
+            <span>+</span>
+            Publicar conteúdo
+          </button>
+        </header>
+
+        <!-- ========================================== -->
+        <!-- GRADE DE CONTEÚDO DA COMUNIDADE -->
+        <!-- ========================================== -->
+
+        <div class="dashboard-grid">
+          <!-- ====================================== -->
+          <!-- FEED -->
+          <!-- ====================================== -->
+
+          <section class="feed">
+            <!-- 1. BLOCO: PUBLICAR -->
+
+            <div class="card publish-card">
+              <img
+                src="/assets/imgs/miguel/img/psicolga3.png"
+                alt="Foto de Beatriz Prates"
+                class="avatar"
+              />
+
+              <div class="publish-content">
+                <textarea
+                  placeholder="Compartilhe uma experiência, faça uma pergunta ou fale sobre um tema da Psicologia..."
+                  aria-label="Nova publicação"
+                ></textarea>
+
+                <div class="publish-actions">
+                  <button class="chip-btn">
+                    <span><i aria-hidden="true" class="fa-solid fa-pen-to-square"></i></span>
+                    Texto
+                  </button>
+
+                  <button class="chip-btn">
+                    <span><i aria-hidden="true" class="fa-solid fa-image"></i></span>
+                    Imagem
+                  </button>
+
+                  <button class="chip-btn">
+                    <span><i aria-hidden="true" class="fa-solid fa-link"></i></span>
+                    Link
+                  </button>
+
+                  <button class="chip-btn">
+                    <span><i aria-hidden="true" class="fa-solid fa-film"></i></span>
+                    Vídeo
+                  </button>
+                </div>
+
+                <div class="feed-filters">
+                  <button class="tag tag-button active">Todos</button>
+
+                  <button class="tag tag-button">Mais recentes</button>
+
+                  <button class="tag tag-button"><i aria-hidden="true" class="fa-solid fa-heart"></i> Mais curtidos</button>
+
+                  <button class="tag tag-button">Meus posts</button>
+
+                  <button class="btn btn-primary btn-sm publish-button">
+                    Publicar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. BLOCO: POST 1 -->
+
+            <article class="card post-card">
+              <div class="post-main">
+                <div class="post-author">
+                  <img
+                    src="/assets/imgs/miguel/img/psicologa2.png"
+                    alt="Foto de Beatriz Prates"
+                    class="avatar"
+                  />
+
+                  <div>
+                    <strong>Beatriz Prates</strong>
+
+                    <small>
+                      Estudante de Psicologia | Suzano - SP • 2h atrás
+                    </small>
+                  </div>
+                </div>
+
+                <button class="post-menu" aria-label="Mais opções">•••</button>
+
+                <h3>Como vocês lidam com a rotina de estudos e atendimento?</h3>
+
+                <p class="post-text">
+                  Estou buscando formas de equilibrar os estudos em Psicologia
+                  com a rotina profissional. Gostaria de saber como outros
+                  profissionais organizam o tempo entre atendimentos, estudos e
+                  vida pessoal. Alguma estratégia que funciona para vocês? <i aria-hidden="true" class="fa-solid fa-heart"></i>
+                </p>
+
+                <div class="tag-group">
+                  <span class="tag pink">Psicologia</span>
+
+                  <span class="tag purple">Estudos e formação</span>
+
+                  <span class="tag yellow">Saúde mental</span>
+                </div>
+
+                <div class="post-stats">
+                  <span><i aria-hidden="true" class="fa-solid fa-heart"></i> 28</span>
+
+                  <span><i aria-hidden="true" class="fa-solid fa-comment"></i> 16</span>
+                </div>
+              </div>
+
+              <div class="comments">
+                <div class="comment">
+                  <img
+                    src="/assets/imgs/miguel/img/psicologo1.png"
+                    alt="Foto de Lucas Ferreira"
+                    class="avatar avatar-sm"
+                  />
+
+                  <div>
+                    <strong>Lucas Ferreira</strong>
+
+                    <p>
+                      Eu costumo organizar horários específicos para estudo e
+                      também reservar um tempo para descanso. Isso ajuda
+                      bastante.
+                    </p>
+
+                    <small>Responder • 12 curtidas • 1h</small>
+                  </div>
+                </div>
+
+                <div class="comment">
+                  <img
+                    src="./assets/imgs/comunidade/img/pessoa03.png"
+                    alt="Foto de Ana Clara"
+                    class="avatar avatar-sm"
+                  />
+
+                  <div>
+                    <strong>Ana Clara</strong>
+
+                    <p>
+                      Também acho importante equilibrar a rotina profissional
+                      com momentos de autocuidado.
+                    </p>
+
+                    <small>Responder • 8 curtidas • 46min</small>
+                  </div>
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Escreva um comentário..."
+                  class="comment-input"
+                  aria-label="Escreva um comentário"
+                />
+              </div>
+            </article>
+
+            <!-- 3. BLOCO: POST 2 -->
+
+            <article class="card post-card">
+              <div class="post-main">
+                <div class="post-author">
+                  <img
+                    src="/assets/imgs/miguel/img/pisicologo4.png"
+                    alt="Foto de Rodrigo Mendes"
+                    class="avatar"
+                  />
+
+                  <div>
+                    <strong>Rodrigo Mendes</strong>
+
+                    <small>
+                      Psicólogo | Saúde emocional | São Paulo - SP • 3h atrás
+                    </small>
+                  </div>
+                </div>
+
+                <button class="post-menu" aria-label="Mais opções">•••</button>
+
+                <h3>
+                  Como vocês abordam temas delicados sobre relacionamentos?
+                </h3>
+
+                <p class="post-text">
+                  Tenho estudado bastante sobre relacionamentos e saúde
+                  emocional e gostaria de conhecer diferentes formas de abordar
+                  temas delicados durante o acompanhamento. Como vocês
+                  costumam criar um espaço seguro para esse tipo de conversa?
+                </p>
+
+                <div class="tag-group">
+                  <span class="tag pink">Relacionamentos</span>
+
+                  <span class="tag purple">Acolhimento</span>
+
+                  <span class="tag yellow">Saúde emocional</span>
+                </div>
+
+                <div class="post-stats">
+                  <span><i aria-hidden="true" class="fa-solid fa-heart"></i> 34</span>
+
+                  <span><i aria-hidden="true" class="fa-solid fa-comment"></i> 21</span>
+                </div>
+              </div>
+
+              <div class="comments">
+                <div class="comment">
+                  <img
+                    src="/assets/imgs/miguel/img/psicologo1.png "
+                    alt="Foto de Lucas Ferreira"
+                    class="avatar avatar-sm"
+                  />
+
+                  <div>
+                    <strong>Lucas Ferreira</strong>
+
+                    <p>
+                      Criar um ambiente acolhedor e ouvir sem julgamentos faz
+                      muita diferença nessas conversas.
+                    </p>
+
+                    <small>Responder • 15 curtidas • 2h</small>
+                  </div>
+                </div>
+
+                <div class="comment">
+                  <img
+                    src="./assets/imgs/comunidade/img/pessoa03.png"
+                    alt="Foto de Ana Clara"
+                    class="avatar avatar-sm"
+                  />
+
+                  <div>
+                    <strong>Ana Clara</strong>
+
+                    <p>
+                      Também acredito que respeitar o tempo de cada pessoa é
+                      essencial.
+                    </p>
+
+                    <small>Responder • 9 curtidas • 1h</small>
+                  </div>
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Escreva um comentário..."
+                  class="comment-input"
+                  aria-label="Escreva um comentário"
+                />
+              </div>
+            </article>
+
+            <!-- 4. BLOCO: POST 3 -->
+
+            <article class="card post-card">
+              <div class="post-main">
+                <div class="post-author">
+                  <img
+                    src="/assets/imgs/miguel/img/psicologa2.png"
+                    alt="Foto de Beatriz Prates"
+                    class="avatar"
+                  />
+
+                  <div>
+                    <strong>Beatriz Prates</strong>
+
+                    <small>
+                      Estudante de Psicologia | Suzano - SP • 5h atrás
+                    </small>
+                  </div>
+                </div>
+
+                <button class="post-menu" aria-label="Mais opções">•••</button>
+
+                <h3>
+                  Quais estratégias vocês utilizam para trabalhar a inteligência
+                  emocional?
+                </h3>
+
+                <p class="post-text">
+                  Tenho interesse em conhecer atividades e estratégias que
+                  possam ajudar as pessoas a compreender melhor seus
+                  sentimentos, desenvolver o autoconhecimento e melhorar a
+                  comunicação nos relacionamentos. <i aria-hidden="true" class="fa-solid fa-brain"></i><i aria-hidden="true" class="fa-solid fa-heart"></i>
+                </p>
+
+                <div class="tag-group">
+                  <span class="tag pink">Inteligência emocional</span>
+
+                  <span class="tag purple">Autoconhecimento</span>
+
+                  <span class="tag yellow">Relacionamentos</span>
+                </div>
+
+                <div class="post-stats">
+                  <span><i aria-hidden="true" class="fa-solid fa-heart"></i> 31</span>
+
+                  <span><i aria-hidden="true" class="fa-solid fa-comment"></i> 18</span>
+                </div>
+              </div>
+
+              <div class="comments">
+                <div class="comment">
+                  <img
+                    src="./assets/imgs/comunidade/img/pessoa02.png"
+                    alt="Foto de Lucas Ferreira"
+                    class="avatar avatar-sm"
+                  />
+
+                  <div>
+                    <strong>Lucas Ferreira</strong>
+
+                    <p>
+                      Gosto de trabalhar a identificação das emoções e
+                      estimular a reflexão sobre situações do dia a dia.
+                    </p>
+
+                    <small>Responder • 11 curtidas • 3h</small>
+                  </div>
+                </div>
+
+                <div class="comment">
+                  <img
+                    src="./assets/imgs/comunidade/img/pessoa03.png"
+                    alt="Foto de Ana Clara"
+                    class="avatar avatar-sm"
+                  />
+
+                  <div>
+                    <strong>Ana Clara</strong>
+
+                    <p>
+                      Comunicação e autoconhecimento são temas que sempre geram
+                      conversas muito interessantes.
+                    </p>
+
+                    <small>Responder • 7 curtidas • 2h</small>
+                  </div>
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Escreva um comentário..."
+                  class="comment-input"
+                  aria-label="Escreva um comentário"
+                />
+              </div>
+            </article>
+          </section>
+
+          <!-- ====================================== -->
+          <!-- COLUNA DIREITA -->
+          <!-- ====================================== -->
+
+          <aside class="right-sidebar">
+            <!-- 5. BLOCO: EM ALTA -->
+
+            <section class="card trending-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-fire"></i></span>
+                  Em alta na comunidade
+                </h3>
+              </div>
+
+              <div class="trend-item">
+                <span class="trend-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span>
+
+                <div>
+                  <strong>Como abordar ansiedade durante o atendimento?</strong>
+                  <small>432 respostas</small>
+                </div>
+              </div>
+
+              <div class="trend-item">
+                <span class="trend-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span>
+
+                <div>
+                  <strong>Estratégias para trabalhar autoestima</strong>
+                  <small>318 respostas</small>
+                </div>
+              </div>
+
+              <div class="trend-item">
+                <span class="trend-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span>
+
+                <div>
+                  <strong>
+                    Como trabalhar comunicação nos relacionamentos?
+                  </strong>
+                  <small>275 respostas</small>
+                </div>
+              </div>
+
+              <div class="trend-item">
+                <span class="trend-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span>
+
+                <div>
+                  <strong>Como acolher alguém em sofrimento emocional?</strong>
+                  <small>241 respostas</small>
+                </div>
+              </div>
+            </section>
+
+            <!-- 6. BLOCO: CATEGORIAS -->
+
+            <section class="card categories-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-leaf"></i></span>
+                  Categorias
+                </h3>
+              </div>
+
+              <div class="tag-group">
+                <span class="tag pink">Psicologia</span>
+
+                <span class="tag purple">Estudos e formação</span>
+
+                <span class="tag green">Saúde mental</span>
+
+                <span class="tag yellow">Relacionamentos</span>
+
+                <span class="tag pink">Acolhimento</span>
+
+                <span class="tag purple">Saúde emocional</span>
+
+                <span class="tag green">Inteligência emocional</span>
+
+                <span class="tag yellow">Autoconhecimento</span>
+
+                <span class="tag pink">Comunicação</span>
+
+                <span class="tag purple">Emoções</span>
+              </div>
+
+              <a href="./usuarios-do-profissional.html" class="link-action">
+                Ver todas as categorias
+                <span class="arrow">&gt;</span>
+              </a>
+            </section>
+
+            <!-- 7. BLOCO: MEUS CONTEÚDOS -->
+
+            <section class="card contents-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-book-open"></i></span>
+                  Meus conteúdos
+                </h3>
+              </div>
+
+              <div class="content-tabs">
+                <button class="selected">
+                  Meus posts
+                  <small>(3)</small>
+                </button>
+
+                <button>
+                  Curtidas
+                  <small>(12)</small>
+                </button>
+
+                <button>
+                  Avaliações
+                  <small>(5)</small>
+                </button>
+              </div>
+
+              <div class="content-item">
+                <span class="content-thumb theme-pink">Saúde mental</span>
+
+                <div>
+                  <strong>A importância do autoconhecimento</strong>
+                  <small>Publicado em 10/07/2025</small>
+                </div>
+
+                <b><i aria-hidden="true" class="fa-solid fa-heart"></i> 42</b>
+              </div>
+
+              <div class="content-item">
+                <span class="content-thumb theme-purple">Relações</span>
+
+                <div>
+                  <strong>Comunicação nos relacionamentos</strong>
+                  <small>Publicado em 01/07/2025</small>
+                </div>
+
+                <b><i aria-hidden="true" class="fa-solid fa-heart"></i> 36</b>
+              </div>
+
+              <div class="content-item">
+                <span class="content-thumb theme-teal">Emoções</span>
+
+                <div>
+                  <strong>Entendendo seus sentimentos</strong>
+                  <small>Publicado em 28/06/2025</small>
+                </div>
+
+                <b><i aria-hidden="true" class="fa-solid fa-heart"></i> 21</b>
+              </div>
+
+              <a href="./usuarios-do-profissional.html" class="link-action">
+                Ver todos
+                <span class="arrow">&gt;</span>
+              </a>
+            </section>
+
+            <!-- 8. BLOCO: CONQUISTAS -->
+
+            <section class="card achievements-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-trophy"></i></span>
+                  Suas conquistas
+                </h3>
+              </div>
+
+              <div class="achievement-grid">
+                <div>
+                  <strong>5</strong>
+                  <small>Posts<br />publicados</small>
+                </div>
+
+                <div>
+                  <strong>12</strong>
+                  <small>Curtidas<br />recebidas</small>
+                </div>
+
+                <div>
+                  <strong>3</strong>
+                  <small>Avaliações<br />recebidas</small>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/comunidade.js"></script>
+  </body>
+</html>

@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Love Journey - Dashboard do Profissional</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/dashboard-profissional.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+
+  <body>
+    <!-- CONTAINER PRINCIPAL DO DASHBOARD -->
+    <div class="app-layout">
+      <!-- ========================================== -->
+      <!-- NAVEGAÇÃO LATERAL (SIDEBAR) -->
+      <!-- ========================================== -->
+
+      <aside class="sidebar">
+        <div class="brand">
+          <img
+            src="./assets/imgs/profissional/img/logo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          />
+
+          <h1 class="brand-name">Love Journey</h1>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a
+                href="./dashboard-profissional.html"
+                class="nav-link active"
+                aria-current="page"
+              >
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="8"
+                    r="3.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M5 20C5.8 16.7 8.1 15 12 15C15.9 15 18.2 16.7 19 20"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <span>Meu Perfil</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./comunidade.html" class="nav-link">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 11.5C20 15.64 16.42 19 12 19C10.72 19 9.51 18.72 8.44 18.22L4 20L5.32 16.45C4.49 15.07 4 13.45 4 11.5C4 7.36 7.58 4 12 4C16.42 4 20 7.36 20 11.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>Comunidade</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./usuarios-do-profissional.html" class="nav-link">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="9"
+                    cy="8"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M3.5 19C4.1 15.9 6 14.5 9 14.5C12 14.5 13.9 15.9 14.5 19"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M15 5.5C16.9 5.5 18.5 6.9 18.5 8.7C18.5 10.2 17.5 11.4 16.2 11.8"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M16 14.5C18.7 14.7 20.2 16.2 20.5 19"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <span>Usuários</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Card de rodapé da Sidebar -->
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- CONTEÚDO PRINCIPAL -->
+      <!-- ========================================== -->
+
+      <main class="main-content">
+        <img
+          src="./assets/imgs/profissional/img/image.png"
+          alt="Plano de fundo Love Journey"
+          class="bg-image"
+        />
+
+        <!-- Cabeçalho Superior do Painel -->
+
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="./assets/imgs/profissional/img/logo.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Meu Perfil Profissional</h2>
+
+              <p class="header-subtitle">
+                Ajude seus usuários com informações profissionais,
+                especialidades e o que você pode oferecer em sua jornada.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-edit-profile">
+            <span><i aria-hidden="true" class="fa-solid fa-pen"></i></span>
+            Editar informações
+          </button>
+        </header>
+
+        <!-- ========================================== -->
+        <!-- GRADE DE CONTEÚDO DO DASHBOARD -->
+        <!-- ========================================== -->
+
+        <div class="dashboard-grid">
+          <!-- ====================================== -->
+          <!-- COLUNA PRINCIPAL -->
+          <!-- ====================================== -->
+
+          <div class="col-main">
+            <!-- 1. BLOCO: PERFIL -->
+
+            <section class="card profile-card">
+              <div class="photo-wrapper">
+                <img
+                  src="./assets/imgs/profissional/img/gabriel.png"
+                  alt="Foto de Gabriel Queiroz"
+                  class="profile-photo"
+                />
+
+                <span class="online" title="Online"></span>
+              </div>
+
+              <div class="profile-info">
+                <h3 class="profile-name">Gabriel Queiroz</h3>
+
+                <p class="profile-role">
+                  Psicólogo | Saúde Mental • Acolhimento • Desenvolvimento
+                  Humano
+                </p>
+
+                <p class="profile-text">
+                  Meu propósito é oferecer escuta qualificada para pessoas que
+                  buscam mais equilíbrio emocional, autoconhecimento e
+                  desenvolvimento.
+                </p>
+
+                <p class="profile-text">
+                  Meu trabalho é baseado em uma abordagem acolhedora e
+                  humanizada, respeitando o tempo e a história de cada pessoa.
+                </p>
+
+                <button class="btn btn-primary btn-block">
+                  Ver currículo completo
+                </button>
+              </div>
+            </section>
+
+            <!-- 2. BLOCO: ESPECIALIDADES -->
+
+            <section class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-puzzle-piece"></i></span>
+                  Especialidades
+                </h3>
+
+                <button class="icon-btn" aria-label="Editar especialidades">
+                  <i aria-hidden="true" class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+
+              <p class="card-instruction">
+                Áreas em que você pode ajudar e compartilhar conhecimentos.
+              </p>
+
+              <div class="tag-group">
+                <span class="tag pink"> Aconselhamento </span>
+
+                <span class="tag green"> Saúde emocional </span>
+
+                <span class="tag purple"> Inteligência emocional </span>
+              </div>
+            </section>
+
+            <!-- 3. BLOCO: PÚBLICO ATENDIDO -->
+
+            <section class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-users"></i></span>
+                  Público atendido
+                </h3>
+
+                <button class="icon-btn" aria-label="Editar público atendido">
+                  <i aria-hidden="true" class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+
+              <p class="card-instruction">
+                Para quem você oferece seus conhecimentos.
+              </p>
+
+              <div class="tag-group">
+                <span class="tag pink"> Jovens em relacionamentos </span>
+
+                <span class="tag purple"> Casais </span>
+
+                <span class="tag green">
+                  Pessoas buscando autoconhecimento
+                </span>
+              </div>
+            </section>
+
+            <!-- 4. BLOCO: TEMAS DE INTERESSE -->
+
+            <section class="card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span>
+                  Temas de interesse
+                </h3>
+
+                <button class="icon-btn" aria-label="Editar temas de interesse">
+                  <i aria-hidden="true" class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+
+              <p class="card-instruction">
+                Assuntos que você gosta de discutir, orientar ou compartilhar.
+              </p>
+
+              <div class="tag-group">
+                <span class="tag yellow"> Comunicação no relacionamento </span>
+
+                <span class="tag purple"> Tecnologia </span>
+
+                <span class="tag green"> Emoções e sentimentos </span>
+
+                <span class="tag yellow"> Saúde mental </span>
+
+                <span class="tag pink"> Relacionamentos </span>
+              </div>
+            </section>
+          </div>
+
+          <!-- ====================================== -->
+          <!-- COLUNA DO MEIO -->
+          <!-- ====================================== -->
+
+          <div class="col-middle">
+            <!-- 5. BLOCO: PERGUNTA -->
+
+            <div class="tip-box mood-prompt">
+              <h5>
+                <span class="tip-icon"><i aria-hidden="true" class="fa-solid fa-camera"></i></span>
+                Como você está se sentindo hoje?
+              </h5>
+            </div>
+
+            <!-- 6. BLOCO: INFORMAÇÕES -->
+
+            <section class="card info-card">
+              <div class="info-item">
+                <span class="info-icon theme-yellow"> <i aria-hidden="true" class="fa-solid fa-clock"></i> </span>
+
+                <div>
+                  <strong>Disponibilidade</strong>
+                  <span>Online • 09:00 - 18:00</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon theme-pink"> <i aria-hidden="true" class="fa-solid fa-handshake"></i> </span>
+
+                <div>
+                  <strong>Atendimento</strong>
+                  <span>Presencial e online</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon theme-purple"> <i aria-hidden="true" class="fa-solid fa-earth-americas"></i> </span>
+
+                <div>
+                  <strong>Idioma</strong>
+                  <span>Português (Brasil)</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon theme-teal"> <i aria-hidden="true" class="fa-solid fa-dollar-sign"></i> </span>
+
+                <div>
+                  <strong>Valor de consulta</strong>
+                  <span>A combinar</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- 7. BLOCO: SOBRE MIM -->
+
+            <section class="card about-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon">⭐</span>
+                  Sobre mim
+                </h3>
+
+                <button class="icon-btn" aria-label="Editar sobre mim">
+                  <i aria-hidden="true" class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+
+              <p class="about-text">
+                Acredito no poder da educação, da empatia e da criatividade para
+                transformar vidas. Gosto de compartilhar conteúdos que possam
+                ajudar pessoas a compreender melhor seus sentimentos e relações.
+              </p>
+
+              <div class="quote-box">
+                <span class="quote-heart"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+
+                <p class="quote-text">
+                  "Sonhe, planeje, conquiste. Lembre-se: você já conseguiu
+                  tanto!"
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <!-- ====================================== -->
+          <!-- COLUNA DIREITA -->
+          <!-- ====================================== -->
+
+          <div class="col-right">
+            <!-- 8. BLOCO: QUESTIONÁRIO DE PERFIL -->
+
+            <section class="card questionnaire-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-clipboard-list"></i></span>
+                  Questionário de perfil
+                </h3>
+              </div>
+
+              <p class="card-instruction">
+                Responda algumas perguntas para nos ajudar a entender melhor
+                como podemos te ajudar.
+              </p>
+
+              <div class="question-list">
+                <span class="question-item">
+                  Quais são seus principais objetivos profissionais?
+                </span>
+
+                <span class="question-item">
+                  Quais são seus níveis de experiência?
+                </span>
+
+                <span class="question-item">
+                  O que você mais gosta de trabalhar?
+                </span>
+
+                <span class="question-item">
+                  O que você gostaria de desenvolver?
+                </span>
+
+                <span class="question-item">
+                  Como você pode ajudar na comunidade?
+                </span>
+              </div>
+
+              <a href="./usuarios-do-profissional.html" class="link-action">
+                Ver todas as respostas
+                <span class="arrow">&gt;</span>
+              </a>
+            </section>
+
+            <!-- 9. BLOCO: MINHA JORNADA -->
+
+            <section class="card timeline-card">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-flag"></i></span>
+                  Minha jornada
+                </h3>
+
+                <button class="icon-btn" aria-label="Editar minha jornada">
+                  <i aria-hidden="true" class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="dot-point"></span>
+
+                  <div>
+                    <strong>Formação em Psicologia</strong>
+                    <small>11/2024</small>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="dot-point"></span>
+
+                  <div>
+                    <strong>Estudos sobre relacionamentos</strong>
+                    <small>11/2024</small>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="dot-point"></span>
+
+                  <div>
+                    <strong>Interesse em saúde emocional</strong>
+                    <small>11/2024</small>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="dot-point"></span>
+
+                  <div>
+                    <strong>Apoio a jovens e casais</strong>
+                    <small>11/2024</small>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="dot-point"></span>
+
+                  <div>
+                    <strong>Escrita e orientação psicológica</strong>
+                    <small>11/2024</small>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="dot-point"></span>
+
+                  <div>
+                    <strong>Desenvolvimento contínuo</strong>
+                    <small>11/2024</small>
+                  </div>
+                </div>
+              </div>
+
+              <a href="./usuarios-do-profissional.html" class="link-action">
+                Ver linha do tempo completa
+                <span class="arrow">&gt;</span>
+              </a>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./js/dashboard-profissional.js" defer></script>
+  </body>
+</html>

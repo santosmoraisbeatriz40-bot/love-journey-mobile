@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/imgs/jadi/img/logolove.png"
+      type="image/png"
+    />
+    <title>Love Journey - Apoio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="./vendor/fonts/poppins/fonts.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./vendor/fontawesome/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/apoio-psicologico.css" />
+    <script src="./app/app-android.js"></script>
+  </head>
+  <body>
+    <!-- CONTAINER PRINCIPAL DO DASHBOARD -->
+    <div class="app-layout">
+      <!-- ========================================== -->
+      <!-- NAVEGAÇÃO LATERAL (SIDEBAR)                -->
+      <!-- ========================================== -->
+      <aside class="sidebar">
+        <a href="./index.html" class="brand">
+          <img
+            src="/assets/imgs/miguel/img/logo.png"
+            alt="Logo Love Journey"
+            class="brand-logo"
+          />
+          <h1 class="brand-name">Love Journey</h1>
+        </a>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="./dashboard-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-house"></i></span> Início
+              </a>
+            </li>
+            <li>
+              <a href="./diario-do-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-book"></i></span> Diário do casal
+              </a>
+            </li>
+            <li>
+              <a href="./dashboard-emocoes.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-face-laugh"></i></span> Minhas emoções
+              </a>
+            </li>
+            <li>
+              <a href="./desafios-do-casal.html" class="nav-link">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-bullseye"></i></span> Desafios
+              </a>
+            </li>
+            <li>
+              <a href="./apoio.html" class="nav-link active" aria-current="page">
+                <span class="icon"><i aria-hidden="true" class="fa-solid fa-user"></i></span> Apoio
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Card de rodapé da Sidebar -->
+        <div class="sidebar-footer-card">
+          <h3>Love Journey</h3>
+          <p>Cuidar do amor é escolher um ao outro, todos os dias.</p>
+        </div>
+      </aside>
+
+      <!-- ========================================== -->
+      <!-- CONTEÚDO PRINCIPAL (MAIN CONTENT)          -->
+      <!-- ========================================== -->
+      <main class="main-content">
+        <img
+          src="/assets/imgs/jadi/img/fotodofundo.jpg"
+          alt="Plano de fundo Love Journey"
+          class="bg-image"
+        />
+
+        <!-- Cabeçalho Superior do Painel -->
+        <header class="page-header">
+          <div class="header-title-wrapper">
+            <img
+              src="/assets/imgs/miguel/img/logo.png"
+              alt="Logo Love Journey"
+              class="header-logo"
+            />
+
+            <div>
+              <h2>Apoio</h2>
+              <p class="header-subtitle">
+                Você não precisa enfrentar tudo sozinho. Encontre apoio,
+                informação e acolhimento.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btn-new-contact">
+            <span>+</span> Novo contato
+          </button>
+        </header>
+
+        <!-- Grade de Conteúdo do Dashboard -->
+        <div class="dashboard-grid">
+          <!-- 1. BLOCO: NOSSOS MENTORES -->
+          <section class="card mentors-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-headphones"></i></span> Nossos mentores</h3>
+              <button class="btn btn-secondary btn-sm" type="button" data-show-all="mentors">Ver todos</button>
+            </div>
+            <p class="card-instruction">
+              Pessoas que escutam, orientam e compartilham experiências.
+            </p>
+
+            <div class="mentors-grid">
+              <article class="mentor-card theme-pink-light">
+                <button class="favorite" type="button" aria-label="Favoritar Fernanda Almeida" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <img
+                  class="avatar-md"
+                  src="/assets/imgs/miguel/img/psicolga3.png"
+                  alt="Mentora Fernanda Almeida"
+                />
+                <h4 class="item-title">Fernanda Almeida</h4>
+                <p class="item-text">Psicóloga</p>
+                <small class="mentor-focus">Relacionamentos</small>
+                <button class="btn btn-secondary btn-sm btn-block" type="button" data-mentor-profile>
+                  Ver perfil
+                </button>
+              </article>
+
+              <article class="mentor-card theme-pink-light">
+                <button class="favorite" type="button" aria-label="Favoritar Rodrigo Mendes" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <img
+                  class="avatar-md"
+                  src="/assets/imgs/miguel/img/pisicologo4.png"
+                  alt="Mentor Rodrigo Mendes"
+                />
+                <h4 class="item-title">Rodrigo Mendes</h4>
+                <p class="item-text">Terapeuta</p>
+                <small class="mentor-focus">Afeto e diálogo</small>
+                <button class="btn btn-secondary btn-sm btn-block" type="button" data-mentor-profile>
+                  Ver perfil
+                </button>
+              </article>
+
+              <article class="mentor-card theme-pink-light">
+                <button class="favorite" type="button" aria-label="Favoritar Carla Nascimento" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-heart"></i></button>
+                <img
+                  class="avatar-md"
+                  src="/assets/imgs/miguel/img/psicologa2.png"
+                  alt="Mentora Carla Nascimento"
+                />
+                <h4 class="item-title">Carla Nascimento</h4>
+                <p class="item-text">Psicóloga</p>
+                <small class="mentor-focus">Saúde emocional</small>
+                <button class="btn btn-secondary btn-sm btn-block" type="button" data-mentor-profile>
+                  Ver perfil
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <!-- 2. BLOCO: CONVERSE COM ALGUÉM -->
+          <section class="card talk-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span> Converse com alguém</h3>
+            </div>
+            <p class="card-instruction">Se precisar conversar, procure ajuda.</p>
+
+            <div class="option-list">
+              <button class="option-btn" type="button" data-talk="mentor">
+                <span class="option-icon"><i aria-hidden="true" class="fa-solid fa-headphones"></i></span>
+                <span class="option-text">
+                  <strong>Falar com um mentor</strong>
+                  <small>Agende uma conversa</small>
+                </span>
+                <span class="chevron">›</span>
+              </button>
+
+              <button class="option-btn" type="button" data-talk="partner">
+                <span class="option-icon"><i aria-hidden="true" class="fa-solid fa-heart"></i></span>
+                <span class="option-text">
+                  <strong>Falar com seu parceiro</strong>
+                  <small>Abra um espaço seguro</small>
+                </span>
+                <span class="chevron">›</span>
+              </button>
+
+              <button class="option-btn" type="button" data-talk="chat">
+                <span class="option-icon"><i aria-hidden="true" class="fa-solid fa-comment"></i></span>
+                <span class="option-text">
+                  <strong>Chat de apoio</strong>
+                  <small>Converse com alguém</small>
+                </span>
+                <span class="chevron">›</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- 3. BLOCO: AJUDA RÁPIDA -->
+          <section class="card help-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span> Ajuda rápida</h3>
+            </div>
+            <p class="card-instruction">Dúvidas e situações comuns.</p>
+
+            <div class="help-list">
+              <button class="help-btn" type="button" data-help="jealousy">
+                <span class="help-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span> Como lidar com ciúmes?
+                <span class="chevron">›</span>
+              </button>
+              <button class="help-btn" type="button" data-help="conflict">
+                <span class="help-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span> O que fazer em conflitos?
+                <span class="chevron">›</span>
+              </button>
+              <button class="help-btn" type="button" data-help="communication">
+                <span class="help-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span> Como melhorar a comunicação?
+                <span class="chevron">›</span>
+              </button>
+              <button class="help-btn" type="button" data-help="professional">
+                <span class="help-icon"><i aria-hidden="true" class="fa-solid fa-circle-question"></i></span> Quando pedir ajuda
+                profissional?
+                <span class="chevron">›</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- 4. BLOCO: RECURSOS E CONTEÚDOS -->
+          <section class="card resources-card">
+            <div class="card-header">
+              <h3><span class="card-icon"><i aria-hidden="true" class="fa-solid fa-book-open"></i></span> Recursos e conteúdos</h3>
+              <button class="btn btn-secondary btn-sm" type="button" data-show-all="resources">Ver todos</button>
+            </div>
+            <p class="card-instruction">
+              Artigos, vídeos e materiais para ajudar você.
+            </p>
+
+            <div class="resources-grid">
+              <article class="resource-card theme-pink-light" role="button" tabindex="0" data-resource>
+                <img src="/assets/imgs/esther/img/discussão.png" alt="Emoções" />
+                <div class="resource-body">
+                  <h4 class="item-title">Como lidar com sentimentos difíceis</h4>
+                  <span class="resource-type"><i aria-hidden="true" class="fa-solid fa-file-lines"></i> Artigo</span>
+                </div>
+              </article>
+
+              <article class="resource-card theme-pink-light" role="button" tabindex="0" data-resource>
+                <img src="/assets/imgs/esther/img/comunicação.png" alt="Diário" />
+                <div class="resource-body">
+                  <h4 class="item-title">Comunicação que aproxima</h4>
+                  <span class="resource-type"><i aria-hidden="true" class="fa-solid fa-film"></i> Vídeo</span>
+                </div>
+              </article>
+
+              <article class="resource-card theme-pink-light" role="button" tabindex="0" data-resource>
+                <img src="/assets/imgs/esther/img/cincocasal.png" alt="Coração" />
+                <div class="resource-body">
+                  <h4 class="item-title">É saudável pedir espaço?</h4>
+                  <span class="resource-type"><i aria-hidden="true" class="fa-solid fa-file-lines"></i> Artigo</span>
+                </div>
+              </article>
+
+              <article class="resource-card theme-pink-light" role="button" tabindex="0" data-resource>
+                <img src="/assets/imgs/esther/img/cincodenovo.png" alt="Objetivo" />
+                <div class="resource-body">
+                  <h4 class="item-title">5 hábitos para uma relação saudável</h4>
+                  <span class="resource-type"><i aria-hidden="true" class="fa-solid fa-file-lines"></i> Artigo</span>
+                </div>
+              </article>
+
+              <article class="resource-card theme-pink-light" role="button" tabindex="0" data-resource>
+                <img src="/assets/imgs/esther/img/aliança.png" alt="Lar" />
+                <div class="resource-body">
+                  <h4 class="item-title">
+                    Hábitos para um relacionamento saudável
+                  </h4>
+                  <span class="resource-type"><i aria-hidden="true" class="fa-solid fa-file-lines"></i> Artigo</span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- 5. BLOCO: JUNTOS POR UM RELACIONAMENTO SAUDÁVEL -->
+          <section class="card closing-card">
+            <div class="closing-text">
+              <div class="card-header">
+                <h3>
+                  <span class="card-icon"><i aria-hidden="true" class="fa-solid fa-heart"></i></span> Juntos por um relacionamento
+                  saudável
+                </h3>
+              </div>
+              <p class="card-instruction">
+                Lembre-se: pedir ajuda, buscar orientação e cuidar de você
+                também faz parte de um relacionamento saudável.
+              </p>
+
+              <div class="tag-group">
+                <span class="tag">Amor</span>
+                <span class="tag">Comunicação</span>
+                <span class="tag">Respeito</span>
+                <span class="tag">Empatia</span>
+                <span class="tag">Parceria</span>
+                <span class="tag">Crescimento</span>
+              </div>
+            </div>
+
+            <div class="tip-box">
+              <h5><span class="tip-icon"><i aria-hidden="true" class="fa-solid fa-lightbulb"></i></span> Pequenos gestos</h5>
+              <p>fortalecem grandes conexões.</p>
+            </div>
+          </section>
+        </div>
+        <section class="card support-contacts" data-contact-section hidden></section>
+        <!-- /dashboard-grid -->
+      </main>
+    </div>
+    <script src="./js/apoio.js" defer></script>
+  </body>
+</html>
